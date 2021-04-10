@@ -11,16 +11,16 @@ Original App Design Project - README Template
 
 ## Overview
 ### Description
-[Description of your app]
+Helps you improve your vocabulary in an engaging manner through mini word games and challenges.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
-- **Category:**
-- **Mobile:**
-- **Story:**
-- **Market:**
-- **Habit:**
-- **Scope:**
+- **Category:** Education / Productivity
+- **Mobile:** This app would be developed for mobile because it's meant to be a daily use app that can be accessed on the go. It can work on a computer but it would have less accessibility.
+- **Story:** Improves vocabulary through engaging exercises and lets the user track their progress and score.
+- **Market:** Students and users looking to learn or practice vocabulary and speech.
+- **Habit:** This app will be used as often as the user wants but the app will provide a user challenge to encourage daily use.
+- **Scope:** The app will start with simple vocabulary teaching and exercises at a level of the user's choice but it can be expanded to include user voice recognition and incorporate games and activities in a variety of languages.
 
 ## Product Spec
 

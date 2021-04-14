@@ -28,39 +28,57 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 
 **Required Must-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User can sign up for a new account
+* User can log in to their account
+* User can save and access their settings and individual progress
+* User can access word definitions
+* User can access examples of correct word usage in a sentence
+* User can test their knowledge by playing word games/challenges
 
 **Optional Nice-to-have Stories**
 
-* [fill in your required user stories here]
-* ...
+* User receives a daily word challenge
+* User can favorite a word and access their “favorite words” list
+* User can choose a word difficulty level
+* User can choose a word category
+* User can specify a language
+* User can play audio to hear the pronunciation of a word
+* User can do speaking exercises and track speaking progress
+* User can share a word outside the app to their social media
 
 ### 2. Screen Archetypes
 
-* [list first screen here]
-   * [list associated required story here]
-   * ...
-* [list second screen here]
-   * [list associated required story here]
-   * ...
+* Login/register screen
+* Profile screen
+   * Displays user score in games/challenges and/or user overall rating
+* Word definition screen
+   * Displays word, word definition, example of word used in a sentence, and audio button to play the pronunciation of a word
+* Word game screen
+   * Presents a word game for the user to solve to test user knowledge
+   * Each game solved correctly will increase the user score for that game
+* Favorite words screen (Nice to Have)
+   * Displays a list of user-specified favorite words
+   * Tapping on a word in the favorite words list will present the word definition screen
+* Settings screen
+   * Allows user to change notification settings
+   * Allows user to specify word difficulty level, word category and/or language
 
 ### 3. Navigation
 
 **Tab Navigation** (Tab to Screen)
 
-* [fill out your first tab]
-* [fill out your second tab]
-* [fill out your third tab]
+* Word definition screen
+* Profile screen
+* Word game screen
 
 **Flow Navigation** (Screen to Screen)
 
-* [list first screen here]
-   * [list screen navigation here]
-   * ...
-* [list second screen here]
-   * [list screen navigation here]
-   * ...
+* Log in/Register
+* Word definition screen
+   * Favorite words screen
+* Word game screen
+* Profile screen
+   * Settings screen
 
 ## Wireframes
 [Add picture of your hand sketched wireframes in this section]

@@ -81,10 +81,10 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
    * Settings screen
 
 ## Wireframes
-[Add picture of your hand sketched wireframes in this section]
 <img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
 
 ### [BONUS] Digital Wireframes & Mockups
+![Canvas](https://user-images.githubusercontent.com/39933444/115070034-675e2800-9ec2-11eb-8f2a-0607f17345cd.png)
 
 ### [BONUS] Interactive Prototype
 

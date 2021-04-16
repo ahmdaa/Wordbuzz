@@ -89,8 +89,6 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 ### [BONUS] Digital Wireframes & Mockups
 ![digital-wireframes](https://user-images.githubusercontent.com/39933444/115073845-e35a6f00-9ec6-11eb-90a8-ec0be6383d2e.png)
 
-### [BONUS] Interactive Prototype
-
 ## Schema 
 [This section will be completed in Unit 9]
 ### Models

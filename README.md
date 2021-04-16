@@ -83,7 +83,7 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 ## Wireframes
 
 
-![Wireframe_Drawing](https://user-images.githubusercontent.com/65603938/115075770-e15ed300-9efb-11eb-8992-961ed953f021.png)
+![Wireframe_Drawing](https://user-images.githubusercontent.com/65603938/115076248-95f8f480-9efc-11eb-9d0f-12083d599890.png)
 
 
 ### [BONUS] Digital Wireframes & Mockups

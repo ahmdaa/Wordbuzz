@@ -81,7 +81,8 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
    * Settings screen
 
 ## Wireframes
-<img src="YOUR_WIREFRAME_IMAGE_URL" width=600>
+
+
 ![Wireframe_Drawing](https://user-images.githubusercontent.com/65603938/115075770-e15ed300-9efb-11eb-8992-961ed953f021.png)
 
 

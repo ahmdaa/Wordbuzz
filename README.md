@@ -126,7 +126,34 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
          }
          ```
    - Profile Screen
-      - (Create/POST) ...
+      - (Read/GET) Query logged in user object
+        ```swift
+        let user = PFUser.current()!
+        nameLabel.text = user.username
+        highScoreLabel.text = user.highScore
+        timesPlayedLabel.text = user.gamesCount
+        favoritedWordsLabel.text = user.favoritedWords.count
+        streakCountLabel.text = user.streakCount
+        ```
+
+      - (Update/PUT) Update user profile image
+        ```swift
+        let user = PFUser.current()!
+        if let imageFile = user["profileImage"] as? PFFileObject {
+           let urlString = imageFile.url!
+           let url = URL(string: urlString)!
+           profileImageView.af.setImage(withURL: url)
+        }
+        ```
+        
+       - (Update/PUT) Update user level 
+        ```swift
+        let user = PFUser.current()!
+        if let userLevel = user[“userLevel”] as! Int {
+            user[userLevel] += 1
+        }
+        ```
+
    
    - Definition Screen
       - (Read/GET) Get seenWords *(To compare to a random word)*

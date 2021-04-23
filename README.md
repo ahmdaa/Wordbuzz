@@ -114,3 +114,16 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
 - [OPTIONAL: List endpoints if using existing API such as Yelp]
+
+#### [OPTIONAL:] Existing API Endpoints
+##### WordsAPI
+- Base URL - [https://wordsapiv1.p.mashape.com/words](https://wordsapiv1.p.mashape.com/words)
+
+   HTTP Verb | Endpoint | Description
+   ----------|----------|------------
+    `GET`    | /{word} | Get a word
+    `GET`    | /{word}?random=true | Get a random word
+    `GET`    | /{word}/definitions  | Get definitions of a word
+    `GET`    | /{word}/examples | Get examples of a word's usage
+    `GET`    | /{word}/frequency | Get frequency score indicating how common a word is in the English language, with a range of 1 to 7
+    `GET`    | /{word}/pronunciation | Get a word’s pronunciation, according to the International Phonetic Alphabet

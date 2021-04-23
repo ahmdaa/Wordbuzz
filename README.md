@@ -146,7 +146,7 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
         }
         ```
         
-       - (Update/PUT) Update user level 
+      - (Update/PUT) Update user level 
         ```swift
         let user = PFUser.current()!
         if let userLevel = user[“userLevel”] as! Int {

@@ -93,8 +93,8 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 [This section will be completed in Unit 9]
 ### Models
 #### Post
-  | User                                              |
-  | ------------------------------------------------- |
+  | User            |                   |             |
+  | --------------- | ----------------- | ----------- |
   | Property        | Type              | Description |
   | --------------- | ----------------- | ------------|
   | objectId        | String            | Unique id for the user (default field) |

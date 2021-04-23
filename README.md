@@ -94,6 +94,7 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 ### Models
 #### Post
   | User                                              |
+  | ------------------------------------------------- |
   | Property        | Type              | Description |
   | --------------- | ----------------- | ------------|
   | objectId        | String            | Unique id for the user (default field) |

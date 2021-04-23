@@ -130,7 +130,7 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
         ```swift
         let user = PFUser.current()!
         nameLabel.text = user.username
-        highScoreLabel.text = user.highScore
+        highScoreLabel.text = user.highestScore
         timesPlayedLabel.text = user.gamesCount
         favoritedWordsLabel.text = user.favoritedWords.count
         streakCountLabel.text = user.streakCount
@@ -139,7 +139,7 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
       - (Update/PUT) Update user profile image
         ```swift
         let user = PFUser.current()!
-        if let imageFile = user["profileImage"] as? PFFileObject {
+        if let imageFile = user["image"] as? PFFileObject {
            let urlString = imageFile.url!
            let url = URL(string: urlString)!
            profileImageView.af.setImage(withURL: url)
@@ -149,8 +149,8 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
       - (Update/PUT) Update user level 
         ```swift
         let user = PFUser.current()!
-        if let userLevel = user[“userLevel”] as! Int {
-            user[userLevel] += 1
+        if let userLevel = user[“level”] as! Int {
+            user[level] += 1
         }
         ```
 
@@ -191,8 +191,8 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
       - (Update/PUT) highestScore
          ```swift
          let user = PFUser.current()!
-         if let highScore = user[“highScore”] as! Int {
-            user[highScore] += 100 
+         if let highestScore = user[“highestScore”] as! Int {
+            user[highestScore] += 100 
          }
          ```
          

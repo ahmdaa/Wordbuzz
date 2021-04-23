@@ -129,13 +129,70 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
       - (Create/POST) ...
    
    - Definition Screen
-      - (Create/POST) ...
+      - (Read/GET) Get seenWords *(To compare to a random word)*
+         ```swift
+         let user = PFUser.current()!
+         if let seenWords = user[“seenWords”] as? Dictionary<String, Int> {
+            // If the word was seen more than 10 times
+            If seenWords[randomWord] > 10 {
+              seenWords[randomWord] -= 1
+              // Get a different random word
+            } else {
+              // Track when the word is seen
+              seenWords[randomWord] += 1
+            }
+         }
+         ```
 
    - Game Screen
-      - (Create/POST) ...
+      - (Read/GET) Get seenWords *(To test user on words they have already been shown in the definition screen, as priority words)*
+         ```swift
+         let user = PFUser.current()!
+         if let seenWords = user[“seenWords”] as? Dictionary<String, Int> {
+            // TODO: Do something with dictionary
+         }
+         ```
+
+      - (Update/PUT) Update count for word in the seenWords dictionary
+         ```swift
+         let user = PFUser.current()!
+         if let seenWords = user[“seenWords”] as? Dictionary<String, Int> {
+            seenWords[currentWord] += 1 
+         }
+         ```
+
+      - (Update/PUT) highestScore
+         ```swift
+         let user = PFUser.current()!
+         if let highScore = user[“highScore”] as! Int {
+            user[highScore] += 100 
+         }
+         ```
+         
+      - (Update/PUT) streakCount
+         ```swift
+         let user = PFUser.current()!
+         // set streakCount to 0 every time player loses a game
+         // otherwise update streakCount
+         if let gamesCount = user[“streakCount”] as! Int {
+            user[streakCount] += 1 
+         }
+         ```
+         
+      - (Update/PUT) gamesCount
+         ```swift
+         let user = PFUser.current()!
+         if let gamesCount = user[“gamesCount”] as! Int {
+            user[gamesCount] += 1 
+         }
+         ```
 
    - Favorite Words Screen
-      - (Create/POST) ...
+      - (Read/GET) favoritedWords
+         ```swift
+         let user = PFUser.current()!
+         favoritedWords = user[“favoritedWords”] as! [String]
+         ```
 
 #### [OPTIONAL:] Existing API Endpoints
 ##### WordsAPI

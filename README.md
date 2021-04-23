@@ -103,7 +103,7 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
   | level           | String            | Level chosen by user that determines which words they are tested on |
   | gamesCount      | Number            | Number of games won and lost by user |
   | streakCount     | Number            | Number of consecutive games won by user  |
-  | highestScore    | Number            | Number of consecutive games won by user (multiplied by 100 points) |
+  | highScore       | Number            | Number of consecutive games won by user (multiplied by 100 points) |
   | favoritedWords  | Array of strings  | List of words favorited by user |
   | seenWords       | Dictionary        | Dictionary of words and how many times the word was shown to the user |
   | createdAt       | DateTime          | Date when user was created (default field) |
@@ -130,7 +130,7 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
         ```swift
         let user = PFUser.current()!
         nameLabel.text = user.username
-        highScoreLabel.text = user.highestScore
+        highScoreLabel.text = user.highScore
         timesPlayedLabel.text = user.gamesCount
         favoritedWordsLabel.text = user.favoritedWords.count
         streakCountLabel.text = user.streakCount
@@ -191,8 +191,8 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
       - (Update/PUT) highestScore
          ```swift
          let user = PFUser.current()!
-         if let highestScore = user[“highestScore”] as! Int {
-            user[highestScore] += 100 
+         if let highScore = user[“highScore”] as! Int {
+            user[highScore] += 100 
          }
          ```
          

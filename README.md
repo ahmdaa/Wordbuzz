@@ -90,7 +90,6 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 ![digital-wireframes](https://user-images.githubusercontent.com/39933444/115073845-e35a6f00-9ec6-11eb-90a8-ec0be6383d2e.png)
 
 ## Schema 
-[This section will be completed in Unit 9]
 ### Models
 #### Post
 
@@ -111,9 +110,32 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
   | updatedAt       | DateTime          | Date when user was last updated (default field) |
   
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+#### List of network requests by screen
+   - Login/Register Screen
+      - (Create/POST) Create a new user object with provided information
+         ```swift
+         let user = PFUser()
+         user.username = usernameField.text
+         user.password = passwordField.text
+         user.signUpInBackground { (success, error) in
+            If success {
+              self.performSegue(with Identifier: “loginSegue”, sender: nil)
+            } else {
+              print(“Error: \(error?.localizedDescription ?? “???”)”)
+            }
+         }
+         ```
+   - Profile Screen
+      - (Create/POST) ...
+   
+   - Definition Screen
+      - (Create/POST) ...
+
+   - Game Screen
+      - (Create/POST) ...
+
+   - Favorite Words Screen
+      - (Create/POST) ...
 
 #### [OPTIONAL:] Existing API Endpoints
 ##### WordsAPI

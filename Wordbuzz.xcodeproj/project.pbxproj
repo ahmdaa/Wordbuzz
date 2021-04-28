@@ -3,13 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242F05112638BDC200945E29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F05102638BDC200945E29 /* LoginViewController.swift */; };
+		242F05142638C5EB00945E29 /* wordDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F05132638C5EB00945E29 /* wordDefinitionViewController.swift */; };
+		B8A7131A58AE85984F589BA6 /* Pods_Wordbuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */; };
 		E22242A22622085D00CDA3DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22242A12622085D00CDA3DD /* AppDelegate.swift */; };
 		E22242A42622085D00CDA3DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22242A32622085D00CDA3DD /* SceneDelegate.swift */; };
-		E22242A62622085D00CDA3DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22242A52622085D00CDA3DD /* ViewController.swift */; };
 		E22242A92622085D00CDA3DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22242A72622085D00CDA3DD /* Main.storyboard */; };
 		E22242AC2622085D00CDA3DD /* Wordbuzz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E22242AA2622085D00CDA3DD /* Wordbuzz.xcdatamodeld */; };
 		E22242AE2622085F00CDA3DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22242AD2622085F00CDA3DD /* Assets.xcassets */; };
@@ -17,15 +19,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		242F05102638BDC200945E29 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		242F05132638C5EB00945E29 /* wordDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = wordDefinitionViewController.swift; sourceTree = "<group>"; };
+		5C1368E224AC56A1C9717365 /* Pods-Wordbuzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordbuzz.release.xcconfig"; path = "Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz.release.xcconfig"; sourceTree = "<group>"; };
+		9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordbuzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E222429E2622085D00CDA3DD /* Wordbuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordbuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E22242A12622085D00CDA3DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E22242A32622085D00CDA3DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		E22242A52622085D00CDA3DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E22242A82622085D00CDA3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E22242AB2622085D00CDA3DD /* Wordbuzz.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Wordbuzz.xcdatamodel; sourceTree = "<group>"; };
 		E22242AD2622085F00CDA3DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22242B02622085F00CDA3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22242B22622085F00CDA3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC1AE48B4F3D6EFAAB76689B /* Pods-Wordbuzz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordbuzz.debug.xcconfig"; path = "Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8A7131A58AE85984F589BA6 /* Pods_Wordbuzz.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52D4D0D4D3A0B26AEA819C92 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		91EE0F0EF3FB948576822549 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FC1AE48B4F3D6EFAAB76689B /* Pods-Wordbuzz.debug.xcconfig */,
+				5C1368E224AC56A1C9717365 /* Pods-Wordbuzz.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		E22242952622085D00CDA3DD = {
 			isa = PBXGroup;
 			children = (
 				E22242A02622085D00CDA3DD /* Wordbuzz */,
 				E222429F2622085D00CDA3DD /* Products */,
+				91EE0F0EF3FB948576822549 /* Pods */,
+				52D4D0D4D3A0B26AEA819C92 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -60,12 +86,13 @@
 			children = (
 				E22242A12622085D00CDA3DD /* AppDelegate.swift */,
 				E22242A32622085D00CDA3DD /* SceneDelegate.swift */,
-				E22242A52622085D00CDA3DD /* ViewController.swift */,
 				E22242A72622085D00CDA3DD /* Main.storyboard */,
 				E22242AD2622085F00CDA3DD /* Assets.xcassets */,
 				E22242AF2622085F00CDA3DD /* LaunchScreen.storyboard */,
 				E22242B22622085F00CDA3DD /* Info.plist */,
 				E22242AA2622085D00CDA3DD /* Wordbuzz.xcdatamodeld */,
+				242F05102638BDC200945E29 /* LoginViewController.swift */,
+				242F05132638C5EB00945E29 /* wordDefinitionViewController.swift */,
 			);
 			path = Wordbuzz;
 			sourceTree = "<group>";
@@ -77,9 +104,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E22242B52622085F00CDA3DD /* Build configuration list for PBXNativeTarget "Wordbuzz" */;
 			buildPhases = (
+				4EE354DE20E74D68C8F8BE20 /* [CP] Check Pods Manifest.lock */,
 				E222429A2622085D00CDA3DD /* Sources */,
 				E222429B2622085D00CDA3DD /* Frameworks */,
 				E222429C2622085D00CDA3DD /* Resources */,
+				3CA81BFBCB29DC4AE06D4B00 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -135,15 +164,58 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3CA81BFBCB29DC4AE06D4B00 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4EE354DE20E74D68C8F8BE20 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wordbuzz-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		E222429A2622085D00CDA3DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E22242AC2622085D00CDA3DD /* Wordbuzz.xcdatamodeld in Sources */,
-				E22242A62622085D00CDA3DD /* ViewController.swift in Sources */,
 				E22242A22622085D00CDA3DD /* AppDelegate.swift in Sources */,
+				242F05112638BDC200945E29 /* LoginViewController.swift in Sources */,
 				E22242A42622085D00CDA3DD /* SceneDelegate.swift in Sources */,
+				242F05142638C5EB00945E29 /* wordDefinitionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +359,7 @@
 		};
 		E22242B62622085F00CDA3DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FC1AE48B4F3D6EFAAB76689B /* Pods-Wordbuzz.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -306,6 +379,7 @@
 		};
 		E22242B72622085F00CDA3DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C1368E224AC56A1C9717365 /* Pods-Wordbuzz.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

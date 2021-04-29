@@ -1,0 +1,6 @@
+framework module Pods_Wordbuzz {
+  umbrella header "Pods-Wordbuzz-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -39,7 +39,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="E5K-hg-242"/>
                                 </constraints>
-                                <state key="normal" title="Sign In"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onSignin:" destination="fju-mH-igP" eventType="touchUpInside" id="ZwC-VI-A3j"/>
                                 </connections>
@@ -50,7 +52,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="6WZ-3Q-2Aw"/>
                                 </constraints>
-                                <state key="normal" title="Register"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="onRegister:" destination="fju-mH-igP" eventType="touchUpInside" id="uhE-P3-1uO"/>
                                 </connections>

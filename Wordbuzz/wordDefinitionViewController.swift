@@ -7,7 +7,7 @@
 
 import UIKit
 
-class wordDefinitionViewController: UIViewController {
+class WordDefinitionViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

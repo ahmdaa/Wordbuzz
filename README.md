@@ -1,6 +1,3 @@
-Original App Design Project - README Template
-===
-
 # Wordbuzz
 
 ## Table of Contents

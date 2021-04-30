@@ -25,12 +25,12 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 
 **Required Must-have Stories**
 
-* User can sign up for a new account
-* User can log in to their account
-* User can save and access their settings and individual progress
-* User can access word definitions
-* User can access examples of correct word usage in a sentence
-* User can test their knowledge by playing word games/challenges
+- [X] User can sign up for a new account
+- [X] User can log in to their account
+- [ ] User can save and access their settings and individual progress
+- [ ] User can access word definitions
+- [ ] User can access examples of correct word usage in a sentence
+- [ ] User can test their knowledge by playing word games/challenges
 
 **Optional Nice-to-have Stories**
 

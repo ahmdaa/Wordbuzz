@@ -1,11 +1,13 @@
 //
-//  wordDefinitionViewController.swift
+//  WordDefinitionViewController.swift
 //  Wordbuzz
 //
 //  Created by Joey Steigelman on 4/28/21.
+//  Modified by Ahmed Abdalla
 //
 
 import UIKit
+import Parse
 
 class WordDefinitionViewController: UIViewController {
 
@@ -15,7 +17,17 @@ class WordDefinitionViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onLogout(_ sender: Any) {
+        PFUser.logOut()
+        
+        let main = UIStoryboard(name: "Main", bundle: nil)
+        let loginViewController = main.instantiateViewController(identifier: "LoginViewController")
+        
+        let delegate = self.view.window?.windowScene?.delegate as! SceneDelegate
+        
+        delegate.window?.rootViewController = loginViewController
+    }
+    
     /*
     // MARK: - Navigation
 

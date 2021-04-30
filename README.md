@@ -82,7 +82,9 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/QpOTS3I.gif' width=350 alt='Video Walkthrough' />
+<img src='https://i.imgur.com/DlMjFHL.gif' width=350 alt='Video Walkthrough' />
+![](https://i.imgur.com/DlMjFHL.gif)
+
 
 ## Wireframes
 

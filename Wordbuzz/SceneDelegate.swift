@@ -21,9 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if PFUser.current() != nil {
             let main = UIStoryboard(name: "Main", bundle: nil)
-            let wordDefinitionNavigationController = main.instantiateViewController(withIdentifier: "WordDefinitionNavigationController")
+            let tabBarController = main.instantiateViewController(withIdentifier: "TabBarController")
             
-            window?.rootViewController = wordDefinitionNavigationController
+            window?.rootViewController = tabBarController
         }
     }
 

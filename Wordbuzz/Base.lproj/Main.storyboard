@@ -12,7 +12,7 @@
         <!--LoginViewController-->
         <scene sceneID="FCw-rn-OdP">
             <objects>
-                <viewController title="LoginViewController" id="fju-mH-igP" customClass="LoginViewController" customModule="Wordbuzz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" title="LoginViewController" id="fju-mH-igP" customClass="LoginViewController" customModule="Wordbuzz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UfH-th-YRe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -187,6 +187,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="htN-fe-aJq">
+                        <barButtonItem key="leftBarButtonItem" title="Logout" id="FaA-tt-Ksa">
+                            <connections>
+                                <action selector="onLogout:" destination="NQj-IT-jCN" id="qM7-Zy-Obd"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Favorites" id="eHL-Os-Grp"/>
                     </navigationItem>
                 </viewController>
@@ -215,7 +220,7 @@
         <!--Word Definition-->
         <scene sceneID="LRX-8T-v4n">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HMC-Jx-qPX" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="WordDefinitionNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="HMC-Jx-qPX" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Word Definition" id="Yqw-wd-26H"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Eir-Dp-slI">

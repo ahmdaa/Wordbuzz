@@ -77,6 +77,15 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 * Profile screen
    * Settings screen
 
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+
+<img src='https://i.imgur.com/hk803aC.gif' title='Video Walkthrough' width='300' alt='Video Walkthrough' />
+
+
 ## Wireframes
 
 

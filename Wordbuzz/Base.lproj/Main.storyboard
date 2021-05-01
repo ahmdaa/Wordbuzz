@@ -174,7 +174,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkx-cf-wiW">
                                 <rect key="frame" x="262" y="276.5" width="32" height="27.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" backgroundImage="speaker.wave.2" catalog="system"/>
+                                <state key="normal" backgroundImage="speaker.wave.2.fill" catalog="system"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2gt-sv-vyn">
                                 <rect key="frame" x="58" y="688" width="298" height="51"/>
@@ -256,6 +256,6 @@
         <image name="Rectangle 86" width="325" height="48"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="heart" catalog="system" width="128" height="109"/>
-        <image name="speaker.wave.2" catalog="system" width="128" height="90"/>
+        <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
     </resources>
 </document>

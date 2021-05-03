@@ -26,9 +26,9 @@ This app helps the user improve their English vocabulary in an engaging manner b
 
 - [X] User can sign up for a new account
 - [X] User can log in to their account
-- [ ] User can save and access their settings and individual progress
 - [ ] User can access random word definitions
 - [ ] User can access examples of correct word usage in a sentence
+- [ ] User can save and access their settings and individual progress
 - [ ] User can test their knowledge by playing word games/challenges
 
 **Optional Nice-to-have Stories**

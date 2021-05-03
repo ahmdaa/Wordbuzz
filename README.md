@@ -11,7 +11,6 @@
 This app helps the user improve their English vocabulary in an engaging manner by providing random English words to learn about and then allowing the user to practice their knowledge of these words through word games and challenges.
 
 ### App Evaluation
-[Evaluation of your app across the following attributes]
 - **Category:** Education / Productivity
 - **Mobile:** This app would be developed for mobile because it's meant to be a daily use app that can be accessed on the go. It can work on a computer but it would have less accessibility and convenience.
 - **Story:** Improves vocabulary through random word discovery, engaging exercises and lets the user track their progress and score.

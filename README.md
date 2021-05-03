@@ -8,16 +8,16 @@
 
 ## Overview
 ### Description
-Helps you improve your vocabulary in an engaging manner through mini word games and challenges.
+This app helps the user improve their English vocabulary in an engaging manner by providing random English words to learn about and then allowing the user to practice their knowledge of these words through word games and challenges.
 
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:** Education / Productivity
-- **Mobile:** This app would be developed for mobile because it's meant to be a daily use app that can be accessed on the go. It can work on a computer but it would have less accessibility.
-- **Story:** Improves vocabulary through engaging exercises and lets the user track their progress and score.
-- **Market:** Students and users looking to learn or practice vocabulary and speech.
-- **Habit:** This app will be used as often as the user wants but the app will provide a user challenge to encourage daily use.
-- **Scope:** The app will start with simple vocabulary teaching and exercises at a level of the user's choice but it can be expanded to include user voice recognition and incorporate games and activities in a variety of languages.
+- **Mobile:** This app would be developed for mobile because it's meant to be a daily use app that can be accessed on the go. It can work on a computer but it would have less accessibility and convenience.
+- **Story:** Improves vocabulary through random word discovery, engaging exercises and lets the user track their progress and score.
+- **Market:** Students and any user looking to learn or practice their English vocabulary and speech.
+- **Habit:** This app will be used as often as the user wants but the app will provide a daily user challenge to encourage frequent use.
+- **Scope:** The app will start with simple English vocabulary learning and exercises at a level of the user's choice but it can be expanded to include user voice recognition, more advanced games and activities or multiple languages!
 
 ## Product Spec
 
@@ -28,14 +28,14 @@ Helps you improve your vocabulary in an engaging manner through mini word games 
 - [X] User can sign up for a new account
 - [X] User can log in to their account
 - [ ] User can save and access their settings and individual progress
-- [ ] User can access word definitions
+- [ ] User can access random word definitions
 - [ ] User can access examples of correct word usage in a sentence
 - [ ] User can test their knowledge by playing word games/challenges
 
 **Optional Nice-to-have Stories**
 
 * User receives a daily word challenge
-* User can favorite a word and access their “favorite words” list
+* User can favorite a word and access their a list of their favorite words
 * User can choose a word difficulty level
 * User can choose a word category
 * User can specify a language

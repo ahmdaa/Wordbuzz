@@ -12,7 +12,15 @@ import Parse
 
 class WordDefinitionViewController: UIViewController {
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var listenButton: UIButton!
+    @IBOutlet weak var nextWordButton: UIButton!
+    
+    @IBOutlet weak var definitionLabel: UILabel!
+    @IBOutlet weak var examplesLabel: UILabel!
+    
     var randomWord = ""
+    var favorited = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +69,25 @@ class WordDefinitionViewController: UIViewController {
         }
         dataTask.resume()
     }
+    
+    // MARK:- Button Actions
+    @IBAction func onFavorite(_ sender: Any) {
+        if(!favorited) {
+            setFavorite(true)
+        } else {
+            setFavorite(false)
+        }
+    }
+    
+    func setFavorite(_ isFavorited: Bool){
+        favorited = isFavorited
+        if (favorited) {
+            favoriteButton.setBackgroundImage(UIImage(systemName: "heart.fill"), for: UIControl.State.normal)
+        } else {
+            favoriteButton.setBackgroundImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

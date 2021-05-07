@@ -71,7 +71,7 @@ class WordDefinitionViewController: UIViewController {
             } else if let data = data {
                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                 
-                print(dataDictionary)
+                // print(dataDictionary)
                 
                 DispatchQueue.main.async {
                     self.randomWord = dataDictionary // Store random word

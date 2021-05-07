@@ -81,8 +81,10 @@ This app helps the user improve their English vocabulary in an engaging manner b
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/DlMjFHL.gif' width=200 alt='Spring #1' />
-<img src='https://imgur.com/up2sUL1.gif' width=200 alt='Spring #2' />
+<p float="left">
+ <img src='https://i.imgur.com/DlMjFHL.gif' width=250 alt='Spring #1' />
+ <img src='https://imgur.com/up2sUL1.gif' width=250 alt='Spring #2' />
+</p>
 
 ## Wireframes
 

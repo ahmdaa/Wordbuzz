@@ -26,8 +26,8 @@ This app helps the user improve their English vocabulary in an engaging manner b
 
 - [X] User can sign up for a new account
 - [X] User can log in to their account
-- [ ] User can access word definitions
-- [ ] User can access examples of correct word usage in a sentence
+- [x] User can access word definitions
+- [x] User can access examples of correct word usage in a sentence
 - [ ] User can save and access their settings and individual progress
 - [ ] User can test their knowledge by playing word games/challenges
 
@@ -81,8 +81,8 @@ This app helps the user improve their English vocabulary in an engaging manner b
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://i.imgur.com/DlMjFHL.gif' width=350 alt='Video Walkthrough' />
-<img src='https://imgur.com/up2sUL1.gif' width=350 alt='Walkthrough 2' />
+<img src='https://i.imgur.com/DlMjFHL.gif' width=200 alt='Spring #1' />
+<img src='https://imgur.com/up2sUL1.gif' width=200 alt='Spring #2' />
 
 ## Wireframes
 

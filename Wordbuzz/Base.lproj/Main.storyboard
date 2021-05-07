@@ -130,18 +130,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-gs-Otc">
-                                <rect key="frame" x="58" y="355" width="298" height="122"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No definition found" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-gs-Otc">
+                                <rect key="frame" x="58" y="355" width="298" height="20.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="298" id="ago-Cm-78a"/>
                                 </constraints>
-                                <string key="text">(noun) a single distinct meaningful element of speech or writing, used with others (or sometimes alone) to form a sentence and typically shown with a space on either side when written or printed.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;I don't like the word ‘unofficial’&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-aG-RhK">
-                                <rect key="frame" x="58" y="497" width="298" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -193,10 +186,25 @@
                                 <state key="normal" title="Next Word" backgroundImage="Rectangle 86">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onNext:" destination="NQj-IT-jCN" eventType="touchUpInside" id="Nl8-Yi-9oQ"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Listen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Pq-F8-r7n">
                                 <rect key="frame" x="256" y="313" width="45" height="18"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoU-r0-g7f">
+                                <rect key="frame" x="162" y="409" width="90" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No examples found" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-aG-RhK">
+                                <rect key="frame" x="58" y="442" width="298" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -212,7 +220,8 @@
                             <constraint firstItem="6Pq-F8-r7n" firstAttribute="leading" secondItem="Vdy-FU-STV" secondAttribute="trailing" constant="75" id="9Ol-z3-0zK"/>
                             <constraint firstItem="Kem-mm-oJS" firstAttribute="top" secondItem="cGa-5X-hFA" secondAttribute="top" constant="109" id="CLT-Rp-sGg"/>
                             <constraint firstItem="Vdy-FU-STV" firstAttribute="top" secondItem="XCw-de-ytc" secondAttribute="bottom" constant="7" id="CMM-wG-ZhN"/>
-                            <constraint firstItem="8hM-aG-RhK" firstAttribute="top" secondItem="WPU-gs-Otc" secondAttribute="bottom" constant="20" id="Hvm-X2-yhJ"/>
+                            <constraint firstItem="XoU-r0-g7f" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="162" id="HkX-f1-XcM"/>
+                            <constraint firstItem="8hM-aG-RhK" firstAttribute="top" secondItem="XoU-r0-g7f" secondAttribute="bottom" constant="12" id="Hvm-X2-yhJ"/>
                             <constraint firstItem="zkx-cf-wiW" firstAttribute="top" secondItem="Kem-mm-oJS" secondAttribute="bottom" constant="18" id="KZs-7a-JMp"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="8hM-aG-RhK" secondAttribute="trailing" constant="58" id="Lr7-wq-IXb"/>
                             <constraint firstItem="XCw-de-ytc" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="129" id="MHn-eU-sOK"/>
@@ -222,10 +231,12 @@
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="Kem-mm-oJS" secondAttribute="trailing" constant="20" id="S0h-Wd-CPV"/>
                             <constraint firstItem="WPU-gs-Otc" firstAttribute="top" secondItem="Vdy-FU-STV" secondAttribute="bottom" constant="24" id="UpO-cz-SIi"/>
                             <constraint firstItem="WPU-gs-Otc" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="58" id="hja-JI-PQ9"/>
+                            <constraint firstItem="XoU-r0-g7f" firstAttribute="top" secondItem="WPU-gs-Otc" secondAttribute="bottom" constant="33.5" id="hqN-tO-v5p"/>
                             <constraint firstItem="zkx-cf-wiW" firstAttribute="leading" secondItem="XCw-de-ytc" secondAttribute="trailing" constant="101" id="hsf-uf-u44"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="bottom" secondItem="2gt-sv-vyn" secondAttribute="bottom" constant="74" id="jZK-dm-elL"/>
                             <constraint firstItem="2gt-sv-vyn" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="58" id="sPs-TN-hnQ"/>
                             <constraint firstItem="6Pq-F8-r7n" firstAttribute="top" secondItem="zkx-cf-wiW" secondAttribute="bottom" constant="7.5" id="sgh-vC-zl2"/>
+                            <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="XoU-r0-g7f" secondAttribute="trailing" constant="162" id="tqU-6o-f30"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="WPU-gs-Otc" secondAttribute="trailing" constant="58" id="z46-YY-RTK"/>
                         </constraints>
                     </view>
@@ -246,6 +257,7 @@
                         <outlet property="favoriteButton" destination="XCw-de-ytc" id="5uk-r3-l5C"/>
                         <outlet property="listenButton" destination="zkx-cf-wiW" id="r5V-0C-3Yj"/>
                         <outlet property="nextWordButton" destination="2gt-sv-vyn" id="vIo-Iw-lWj"/>
+                        <outlet property="wordLabel" destination="Kem-mm-oJS" id="u8O-j5-LVW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vw7-m8-kZB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

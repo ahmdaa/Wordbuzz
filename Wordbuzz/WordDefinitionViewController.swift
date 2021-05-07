@@ -16,17 +16,17 @@ class WordDefinitionViewController: UIViewController {
     @IBOutlet weak var listenButton: UIButton!
     @IBOutlet weak var nextWordButton: UIButton!
     
+    @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet weak var examplesLabel: UILabel!
     
-    var randomWord = ""
+    var randomWord = [String: Any]()
     var favorited = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         getRandomWord()
-        // Do any additional setup after loading the view.
     }
     
     // MARK:- Network Requests
@@ -43,6 +43,7 @@ class WordDefinitionViewController: UIViewController {
     
     // MARK:- API
     func getRandomWord() {
+        print("Making a request..")
         let headers = [
             "x-rapidapi-key": "a10993a051msh078390884b6556fp17dfdfjsn6ef5bb0fb17f",
             "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
@@ -63,14 +64,55 @@ class WordDefinitionViewController: UIViewController {
                print(error.localizedDescription)
             } else if let data = data {
                let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
-               
-               print(dataDictionary)
+                
+                print(dataDictionary)
+                
+                DispatchQueue.main.async {
+                    self.randomWord = dataDictionary // Store random word
+                    self.wordLabel.text = dataDictionary["word"] as? String
+                    //print(dataDictionary["results"][0] ?? "")
+                    //print(dataDictionary["syllables"] ?? "")
+                    if let definitions = dataDictionary["results"] as? [[String: Any]] {
+                        let definition = definitions[0] // Get the first definition
+                        /* var definitionList = ""
+                        
+                        for definition in definitions {
+                            definitionList += definition["definition"] as? String ?? ""
+                        }
+                        
+                        print(definitionList) */
+                        
+                        // Set the word's definition
+                        if let definitionText = definition["definition"] as? String {
+                            self.definitionLabel.text = definitionText
+                        }
+                        
+                        // Set the word's examples
+                        if let examples = definition["examples"] as? [String] {
+                            var examplesText = ""
+                            for example in examples {
+                                examplesText += example + "\n"
+                            }
+
+                            self.examplesLabel.text = examplesText
+                        }
+                    } else {
+                        self.definitionLabel.text = "No definition found"
+                        self.examplesLabel.text = "No examples found"
+                    }
+                }
+                
+                
             }
         }
         dataTask.resume()
     }
     
     // MARK:- Button Actions
+    @IBAction func onNext(_ sender: Any) {
+        getRandomWord()
+    }
+    
     @IBAction func onFavorite(_ sender: Any) {
         if(!favorited) {
             setFavorite(true)

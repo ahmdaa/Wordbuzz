@@ -21,12 +21,17 @@ class WordDefinitionViewController: UIViewController {
     @IBOutlet weak var examplesLabel: UILabel!
     
     var randomWord = [String: Any]()
+    var wordSet = ["study", "fun", "happy", "construction"]
+    var wordIndex = 0
     var favorited = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        nextWordButton.clipsToBounds = true
+        nextWordButton.layer.cornerRadius = 14
 
-        getRandomWord()
+        getRandomWord(index: wordIndex)
     }
     
     // MARK:- Network Requests
@@ -42,14 +47,15 @@ class WordDefinitionViewController: UIViewController {
     }
     
     // MARK:- API
-    func getRandomWord() {
+    func getRandomWord(index: Int) {
         print("Making a request..")
         let headers = [
             "x-rapidapi-key": "a10993a051msh078390884b6556fp17dfdfjsn6ef5bb0fb17f",
             "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
         ]
 
-        let url = URL(string: "https://wordsapiv1.p.rapidapi.com/words/?random=true")!
+        let urlString = String(format: "https://wordsapiv1.p.rapidapi.com/words/%@", wordSet[wordIndex])
+        let url = URL(string: urlString)!
         var request = URLRequest(url: url,
                                  cachePolicy: .useProtocolCachePolicy,
                                  timeoutInterval: 10.0)
@@ -91,7 +97,7 @@ class WordDefinitionViewController: UIViewController {
                         if let examples = definition["examples"] as? [String] {
                             var examplesText = ""
                             for example in examples {
-                                examplesText += example + "\n"
+                                examplesText += "\"" + example + "\"\n"
                             }
 
                             self.examplesLabel.text = examplesText
@@ -110,7 +116,8 @@ class WordDefinitionViewController: UIViewController {
     
     // MARK:- Button Actions
     @IBAction func onNext(_ sender: Any) {
-        getRandomWord()
+        wordIndex += 1
+        getRandomWord(index: wordIndex)
     }
     
     @IBAction func onFavorite(_ sender: Any) {

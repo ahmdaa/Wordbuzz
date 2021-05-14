@@ -16,6 +16,10 @@
 		E22242AC2622085D00CDA3DD /* Wordbuzz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E22242AA2622085D00CDA3DD /* Wordbuzz.xcdatamodeld */; };
 		E22242AE2622085F00CDA3DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22242AD2622085F00CDA3DD /* Assets.xcassets */; };
 		E22242B12622085F00CDA3DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22242AF2622085F00CDA3DD /* LaunchScreen.storyboard */; };
+		E2D7D1F4264E2612008D45B5 /* vocab-intermediate.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2D7D1F3264E2612008D45B5 /* vocab-intermediate.txt */; };
+		E2D7D1F6264E268D008D45B5 /* vocab-beginner.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2D7D1F5264E268D008D45B5 /* vocab-beginner.txt */; };
+		E2D7D1F8264E269C008D45B5 /* vocab-advanced.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2D7D1F7264E269C008D45B5 /* vocab-advanced.txt */; };
+		E2D7D1FA264E26D8008D45B5 /* vocab-expert.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2D7D1F9264E26D8008D45B5 /* vocab-expert.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		E22242AD2622085F00CDA3DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22242B02622085F00CDA3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22242B22622085F00CDA3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E2D7D1F3264E2612008D45B5 /* vocab-intermediate.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vocab-intermediate.txt"; sourceTree = "<group>"; };
+		E2D7D1F5264E268D008D45B5 /* vocab-beginner.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vocab-beginner.txt"; sourceTree = "<group>"; };
+		E2D7D1F7264E269C008D45B5 /* vocab-advanced.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vocab-advanced.txt"; sourceTree = "<group>"; };
+		E2D7D1F9264E26D8008D45B5 /* vocab-expert.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vocab-expert.txt"; sourceTree = "<group>"; };
 		FC1AE48B4F3D6EFAAB76689B /* Pods-Wordbuzz.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordbuzz.debug.xcconfig"; path = "Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +74,10 @@
 		E22242952622085D00CDA3DD = {
 			isa = PBXGroup;
 			children = (
+				E2D7D1F9264E26D8008D45B5 /* vocab-expert.txt */,
+				E2D7D1F7264E269C008D45B5 /* vocab-advanced.txt */,
+				E2D7D1F5264E268D008D45B5 /* vocab-beginner.txt */,
+				E2D7D1F3264E2612008D45B5 /* vocab-intermediate.txt */,
 				E22242A02622085D00CDA3DD /* Wordbuzz */,
 				E222429F2622085D00CDA3DD /* Products */,
 				91EE0F0EF3FB948576822549 /* Pods */,
@@ -156,6 +168,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2D7D1FA264E26D8008D45B5 /* vocab-expert.txt in Resources */,
+				E2D7D1F8264E269C008D45B5 /* vocab-advanced.txt in Resources */,
+				E2D7D1F6264E268D008D45B5 /* vocab-beginner.txt in Resources */,
+				E2D7D1F4264E2612008D45B5 /* vocab-intermediate.txt in Resources */,
 				E22242B12622085F00CDA3DD /* LaunchScreen.storyboard in Resources */,
 				E22242AE2622085F00CDA3DD /* Assets.xcassets in Resources */,
 				E22242A92622085D00CDA3DD /* Main.storyboard in Resources */,

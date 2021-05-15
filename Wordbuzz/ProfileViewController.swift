@@ -6,9 +6,23 @@
 //
 
 import UIKit
+import Parse
 
 class ProfileViewController: UIViewController {
 
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
+    
+    @IBOutlet weak var highscoreLabel: UILabel!
+    
+    override func viewDidAppear(_ animated: Bool) {
+        profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        
+        let user = PFUser.current()!
+        usernameLabel.text = user.username
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

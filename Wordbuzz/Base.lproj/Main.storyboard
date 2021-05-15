@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -122,7 +123,7 @@
             </objects>
             <point key="canvasLocation" x="3493" y="-715"/>
         </scene>
-        <!--Profile View Controller-->
+        <!--Profile-->
         <scene sceneID="WEw-fH-GH5">
             <objects>
                 <viewController id="GjF-iE-dpS" customClass="ProfileViewController" customModule="Wordbuzz" customModuleProvider="target" sceneMemberID="viewController">
@@ -131,38 +132,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6jt-Ct-H01">
-                                <rect key="frame" x="132" y="142" width="150" height="150"/>
+                                <rect key="frame" x="132" y="98" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="c0s-dA-cGF"/>
                                     <constraint firstAttribute="width" constant="150" id="sCo-00-euN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Jones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Xt-hBh">
-                                <rect key="frame" x="132" y="308" width="150" height="21"/>
+                                <rect key="frame" x="132" y="264" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nA-HC-LOE">
-                                <rect key="frame" x="132" y="362" width="150" height="24"/>
+                                <rect key="frame" x="132" y="318" width="150" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-70-zlL">
-                                <rect key="frame" x="132" y="394" width="150" height="36"/>
+                                <rect key="frame" x="132" y="350" width="150" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Score: 300  Times Played: 30  Longest Streak: 15 days  Favorited Words: 0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXJ-FS-IMg">
-                                <rect key="frame" x="93" y="510" width="229" height="142.5"/>
+                                <rect key="frame" x="93" y="466" width="229" height="142.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Progress" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucU-Ef-Lnu">
-                                <rect key="frame" x="93" y="467" width="229" height="24"/>
+                                <rect key="frame" x="93" y="423" width="229" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -191,11 +192,15 @@
                             <constraint firstItem="gbb-s8-c0N" firstAttribute="trailing" secondItem="3nA-HC-LOE" secondAttribute="trailing" constant="132" id="wpy-xz-dXs"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Profile" id="EvH-b6-fLD">
+                        <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
+                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="0yj-Kl-Lfx"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHk-lc-HEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889.8550724637685" y="2153.5714285714284"/>
+            <point key="canvasLocation" x="4200" y="741"/>
         </scene>
         <!--WordDefinitionViewController-->
         <scene sceneID="egE-28-0WS">
@@ -319,11 +324,8 @@
                                 <action selector="onLogout:" destination="NQj-IT-jCN" id="qM7-Zy-Obd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Profile" id="eHL-Os-Grp">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="eHL-Os-Grp">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="GjF-iE-dpS" kind="show" id="nhr-sH-4D7"/>
-                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -353,6 +355,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="HMC-Jx-qPX" kind="relationship" relationship="viewControllers" id="iKh-sM-xIb"/>
+                        <segue destination="GjF-iE-dpS" kind="relationship" relationship="viewControllers" id="0Nu-OB-XMH"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEE-VR-e0T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -389,6 +392,7 @@
         <image name="Rectangle 86" width="325" height="48"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <image name="speaker.wave.2.fill" catalog="system" width="128" height="90"/>
     </resources>
 </document>

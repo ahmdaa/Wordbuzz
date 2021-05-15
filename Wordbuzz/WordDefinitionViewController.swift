@@ -62,6 +62,21 @@ class WordDefinitionViewController: UIViewController {
         delegate.window?.rootViewController = loginViewController
     }
     
+    func saveSeenWord(seen: String) {
+        let user = PFUser.current()!
+        
+        var seenWords = user["seenWords"] as? [String]
+        seenWords?.append(seen)
+        user["seenWords"] = seenWords
+    }
+    
+    func resetSeenWords(seen: String) {
+        let user = PFUser.current()!
+        
+        let seenWords = [String]()
+        user["seenWords"] = seenWords
+    }
+    
     // MARK:- API
     func getRandomWord() {
         print("Making request..")

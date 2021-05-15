@@ -84,6 +84,7 @@ Here's a walkthrough of implemented user stories:
 <p float="left">
  <img src='https://i.imgur.com/DlMjFHL.gif' width=250 alt='Spring #1' />
  <img src='https://imgur.com/up2sUL1.gif' width=250 alt='Spring #2' />
+ <img src='https://imgur.com/FpN1lio.gif' width=250 alt='Spring #2' />
 </p>
 
 ## Wireframes

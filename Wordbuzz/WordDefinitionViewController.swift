@@ -48,6 +48,8 @@ class WordDefinitionViewController: UIViewController {
         }
         
         getRandomWord()
+        // saveSeenWord(seen: "apple")
+        // resetSeenWords()
     }
     
     // MARK:- Network Requests
@@ -65,16 +67,38 @@ class WordDefinitionViewController: UIViewController {
     func saveSeenWord(seen: String) {
         let user = PFUser.current()!
         
-        var seenWords = user["seenWords"] as? [String]
-        seenWords?.append(seen)
-        user["seenWords"] = seenWords
+        if var seenWords = user["seenWords"] as? [String] {
+            if( !seenWords.contains(seen) ) {
+                seenWords.append(seen)
+                user["seenWords"] = seenWords
+            }
+        } else {
+            let seenWords = [String]()
+            user["seenWords"] = seenWords
+        }
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User updated")
+            } else {
+                print("Error saving user")
+            }
+        }
     }
     
-    func resetSeenWords(seen: String) {
+    func resetSeenWords() {
         let user = PFUser.current()!
         
         let seenWords = [String]()
         user["seenWords"] = seenWords
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User updated")
+            } else {
+                print("Error saving user")
+            }
+        }
     }
     
     // MARK:- API
@@ -106,12 +130,16 @@ class WordDefinitionViewController: UIViewController {
                 } else if let data = data {
                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                     
-                    print(dataDictionary)
+                    // print(dataDictionary)
                     
                     DispatchQueue.main.async {
                         self.wordData = dataDictionary // Store word data
                         
-                        self.wordLabel.text = dataDictionary["word"] as? String
+                        if let word = dataDictionary["word"] as? String {
+                            self.wordLabel.text = word
+                            self.saveSeenWord(seen: word)
+                        }
+                        
                         //print(dataDictionary["results"][0] ?? "")
                         //print(dataDictionary["syllables"] ?? "")
                         

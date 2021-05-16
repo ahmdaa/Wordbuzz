@@ -28,11 +28,13 @@ This app helps the user improve their English vocabulary in an engaging manner b
 - [X] User can log in to their account
 - [x] User can access word definitions
 - [x] User can access examples of correct word usage in a sentence
-- [ ] User can save and access their settings and individual progress
+- [x] User can save and access their individual progress
+- [ ] User can access and change settings
 - [ ] User can test their knowledge by playing word games/challenges
 
 **Optional Nice-to-have Stories**
 
+* [ ] User can see multiple definitions and their examples
 * User receives a daily word challenge
 * User can favorite a word and access their a list of their favorite words
 * User can choose a word difficulty level

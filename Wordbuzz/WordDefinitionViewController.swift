@@ -47,7 +47,7 @@ class WordDefinitionViewController: UIViewController {
             print("File not found")
         }
         
-        getRandomWord()
+        // getRandomWord()
         // saveSeenWord(seen: "apple")
         // resetSeenWords()
     }
@@ -130,7 +130,7 @@ class WordDefinitionViewController: UIViewController {
                 } else if let data = data {
                    let dataDictionary = try! JSONSerialization.jsonObject(with: data, options: []) as! [String: Any]
                     
-                    // print(dataDictionary)
+                    print(dataDictionary)
                     
                     DispatchQueue.main.async {
                         self.wordData = dataDictionary // Store word data
@@ -147,25 +147,32 @@ class WordDefinitionViewController: UIViewController {
                         if let definitions = dataDictionary["results"] as? [[String: Any]] {
                             
                             // Store the first definition in a variable
-                            let definition = definitions[0]
+                            let firstDefinition = definitions[0]
                             
-                            /* var definitionList = ""
+                            var definitionList = ""
+                            var index = 1
                             
                             for definition in definitions {
-                                definitionList += definition["definition"] as? String ?? ""
+                                if let definitionText = definition["definition"] as? String {
+                                    definitionList += String(index) + ". " + definitionText + "\n"
+                                    index += 1
+                                }
                             }
                             
-                            print(definitionList) */
+                            print(definitionList)
+                            self.definitionLabel.text = definitionList
+                            
+                            // print(definitionList)
                             
                             // Set the word's definition label text
-                            if let definitionText = definition["definition"] as? String {
+                            /* if let definitionText = definition["definition"] as? String {
                                 self.definitionLabel.text = definitionText
                             } else {
                                 self.definitionLabel.text = "No definition found"
-                            }
+                            } */
                             
                             // Set the word's examples label text
-                            if let examples = definition["examples"] as? [String] {
+                            if let examples = firstDefinition["examples"] as? [String] {
                                 var examplesText = ""
                                 for example in examples {
                                     examplesText += "\"" + example + "\"\n"

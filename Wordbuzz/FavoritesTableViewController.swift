@@ -6,8 +6,20 @@
 //
 
 import UIKit
+import Parse
 
 class FavoritesTableViewController: UITableViewController {
+    
+    var words = [String]()
+    
+    override func viewDidAppear(_ animated: Bool) {
+        let user = PFUser.current()!
+        
+        if let favoriteWords = user["favoriteWords"] as? [String] {
+            words = favoriteWords
+            tableView.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,14 +35,14 @@ class FavoritesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return words.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "FavoritesCell", for: indexPath) as! FavoritesTableViewCell
 
-        cell.wordLabel.text = "Hello"
+        cell.wordLabel.text = words[indexPath.row]
 
         return cell
     }

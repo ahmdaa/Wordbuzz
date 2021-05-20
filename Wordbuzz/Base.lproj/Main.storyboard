@@ -199,8 +199,8 @@
                     <navigationItem key="navigationItem" id="0yj-Kl-Lfx"/>
                     <connections>
                         <outlet property="highscoreLabel" destination="WJo-70-zlL" id="XJF-ft-Z8W"/>
+                        <outlet property="nameLabel" destination="THu-Xt-hBh" id="yfk-iu-KdG"/>
                         <outlet property="profileImageView" destination="6jt-Ct-H01" id="Wpd-XM-fwW"/>
-                        <outlet property="usernameLabel" destination="THu-Xt-hBh" id="X5l-sl-G9X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHk-lc-HEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -220,10 +220,10 @@
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="183" id="7H0-VT-Hdc"/>
                                 </constraints>
-                                <mutableString key="text">1. marked by sudden changes in subject and sharp transitions
+                                <string key="text">1. marked by sudden changes in subject and sharp transitions
 2. extremely steep
 3. exceedingly sudden and unexpected
-4. surprisingly and unceremoniously brusque in manner 5. exceedingly sudden and unexpected 6. exceedingly sudden and unexpected 7. exceedingly sudden and unexpected</mutableString>
+4. surprisingly and unceremoniously brusque in manner 5. exceedingly sudden and unexpected 6. exceedingly sudden and unexpected 7. exceedingly sudden and unexpected</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>

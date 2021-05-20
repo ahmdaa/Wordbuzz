@@ -10,8 +10,7 @@ import Parse
 
 class ProfileViewController: UIViewController {
 
-    
-    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var highscoreLabel: UILabel!
@@ -19,14 +18,18 @@ class ProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         
-        let user = PFUser.current()!
-        usernameLabel.text = user.username
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let user = PFUser.current()!
+        
+        if let name = user["fullName"] as? String {
+            nameLabel.text = name
+        } else {
+            nameLabel.text = user.username
+        }
     }
     
 

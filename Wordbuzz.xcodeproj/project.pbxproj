@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		242F05112638BDC200945E29 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F05102638BDC200945E29 /* LoginViewController.swift */; };
 		242F05142638C5EB00945E29 /* WordDefinitionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 242F05132638C5EB00945E29 /* WordDefinitionViewController.swift */; };
+		24E29A712657FE4700BF312D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E29A702657FE4700BF312D /* GameViewController.swift */; };
 		B8A7131A58AE85984F589BA6 /* Pods_Wordbuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */; };
 		CF027C50264EFF8200F99273 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF027C4F264EFF8200F99273 /* ProfileViewController.swift */; };
 		E22242A22622085D00CDA3DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22242A12622085D00CDA3DD /* AppDelegate.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		242F05102638BDC200945E29 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		242F05132638C5EB00945E29 /* WordDefinitionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDefinitionViewController.swift; sourceTree = "<group>"; };
+		24E29A702657FE4700BF312D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5C1368E224AC56A1C9717365 /* Pods-Wordbuzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordbuzz.release.xcconfig"; path = "Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz.release.xcconfig"; sourceTree = "<group>"; };
 		9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordbuzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF027C4F264EFF8200F99273 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				242F05102638BDC200945E29 /* LoginViewController.swift */,
 				242F05132638C5EB00945E29 /* WordDefinitionViewController.swift */,
 				CF027C4F264EFF8200F99273 /* ProfileViewController.swift */,
+				24E29A702657FE4700BF312D /* GameViewController.swift */,
 			);
 			path = Wordbuzz;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24E29A712657FE4700BF312D /* GameViewController.swift in Sources */,
 				CF027C50264EFF8200F99273 /* ProfileViewController.swift in Sources */,
 				E22242AC2622085D00CDA3DD /* Wordbuzz.xcdatamodeld in Sources */,
 				E22242A22622085D00CDA3DD /* AppDelegate.swift in Sources */,

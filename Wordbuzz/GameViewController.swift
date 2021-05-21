@@ -187,7 +187,7 @@ class GameViewController: UIViewController {
                         self.wordData = dataDictionary // Store word data
                         
                         //update count of seenWords
-//                        if let seenWords = user["seenWords"] as? Dictionary<String, Int> {
+//                        if let seenWords = user["seenWords"] as? Dictionary[String, Int] {
 //                            seenWords[word] += 1
 //                        }
                         

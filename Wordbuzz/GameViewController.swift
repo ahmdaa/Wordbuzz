@@ -58,11 +58,13 @@ class GameViewController: UIViewController {
         let whiteTextColor = UIColor(red:253/255, green:253/255, blue:253/255, alpha: 1)
         let lightGrayButtonColor = UIColor(red:194/255, green:194/255, blue:196/255, alpha: 1)
         let customMediumGrayColor = UIColor(red:48/255, green:48/255, blue:61/255, alpha: 1)
+        let darkButtonColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
 
-        wordChoiceOneButton.backgroundColor = lightGrayButtonColor
-        wordChoiceTwoButton.backgroundColor = lightGrayButtonColor
-        wordChoiceThreeButton.backgroundColor = lightGrayButtonColor
-        wordChoiceFourButton.backgroundColor = lightGrayButtonColor
+        
+        wordChoiceOneButton.backgroundColor = darkButtonColor
+        wordChoiceTwoButton.backgroundColor = darkButtonColor
+        wordChoiceThreeButton.backgroundColor = darkButtonColor
+        wordChoiceFourButton.backgroundColor = darkButtonColor
         
         wordChoiceOneButton.setTitleColor(whiteTextColor, for: .normal)
         wordChoiceTwoButton.setTitleColor(whiteTextColor, for: .normal)
@@ -74,10 +76,10 @@ class GameViewController: UIViewController {
         wordChoiceThreeButton.clipsToBounds = true
         wordChoiceFourButton.clipsToBounds = true
  
-        wordChoiceOneButton.layer.cornerRadius = 32
-        wordChoiceTwoButton.layer.cornerRadius = 32
-        wordChoiceThreeButton.layer.cornerRadius = 32
-        wordChoiceFourButton.layer.cornerRadius = 32
+        wordChoiceOneButton.layer.cornerRadius = 12
+        wordChoiceTwoButton.layer.cornerRadius = 12
+        wordChoiceThreeButton.layer.cornerRadius = 12
+        wordChoiceFourButton.layer.cornerRadius = 12
         
     }
     
@@ -186,7 +188,7 @@ class GameViewController: UIViewController {
                         
                         //update count of seenWords
 //                        if let seenWords = user["seenWords"] as? Dictionary<String, Int> {
-//                           seenWords[word] += 1
+//                            seenWords[word] += 1
 //                        }
                         
                         // Get all definitions if any are available
@@ -286,12 +288,12 @@ class GameViewController: UIViewController {
             //restore UI after a delay
             self.answerMessageLabel.isHidden = true // hide
 
-            let lightGrayButtonColor = UIColor(red:194/255, green:194/255, blue:196/255, alpha: 1)
-            
-            self.wordChoiceOneButton.backgroundColor = lightGrayButtonColor
-            self.wordChoiceTwoButton.backgroundColor = lightGrayButtonColor
-            self.wordChoiceThreeButton.backgroundColor = lightGrayButtonColor
-            self.wordChoiceFourButton.backgroundColor = lightGrayButtonColor
+            let darkButtonColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
+
+            self.wordChoiceOneButton.backgroundColor = darkButtonColor
+            self.wordChoiceTwoButton.backgroundColor = darkButtonColor
+            self.wordChoiceThreeButton.backgroundColor = darkButtonColor
+            self.wordChoiceFourButton.backgroundColor = darkButtonColor
             
             self.wordChoiceOneButton.setBackgroundImage(nil, for: .normal)
             self.wordChoiceTwoButton.setBackgroundImage(nil, for: .normal)
@@ -315,8 +317,8 @@ class GameViewController: UIViewController {
     func guessIsIncorrect(chosenAnswer: Bool, button: UIButton) {
         
         //change button color
-        let darkGrayButtonColor = UIColor(red:39/255, green:39/255, blue:51/255, alpha: 1)
-        button.backgroundColor = darkGrayButtonColor
+        let redButtonColor = UIColor(red:254/255, green:45/255, blue:83/255, alpha: 1)
+        button.backgroundColor = redButtonColor
         
         //display wrong answer message
         answerMessageLabel.isHidden = false // show
@@ -333,12 +335,12 @@ class GameViewController: UIViewController {
 
             self.answerMessageLabel.isHidden = true // hide
 
-            let lightGrayButtonColor = UIColor(red:194/255, green:194/255, blue:196/255, alpha: 1)
-            
-            self.wordChoiceOneButton.backgroundColor = lightGrayButtonColor
-            self.wordChoiceTwoButton.backgroundColor = lightGrayButtonColor
-            self.wordChoiceThreeButton.backgroundColor = lightGrayButtonColor
-            self.wordChoiceFourButton.backgroundColor = lightGrayButtonColor
+            let darkButtonColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
+
+            self.wordChoiceOneButton.backgroundColor = darkButtonColor
+            self.wordChoiceTwoButton.backgroundColor = darkButtonColor
+            self.wordChoiceThreeButton.backgroundColor = darkButtonColor
+            self.wordChoiceFourButton.backgroundColor = darkButtonColor
             
             self.wordChoiceOneButton.setBackgroundImage(nil, for: .normal)
             self.wordChoiceTwoButton.setBackgroundImage(nil, for: .normal)

@@ -47,7 +47,7 @@ class WordDefinitionViewController: UIViewController {
             print("File not found")
         }
         
-        getRandomWord()
+        // getRandomWord()
         // saveSeenWord(seen: "apple")
         // resetSeenWords()
     }
@@ -101,6 +101,72 @@ class WordDefinitionViewController: UIViewController {
         }
     }
     
+    // Add a word to user's favorite words
+    func favoriteWord(word: String) {
+        let user = PFUser.current()!
+        
+        if var favoriteWords = user["favoriteWords"] as? [String] {
+            if( !favoriteWords.contains(word) ) {
+                favoriteWords.append(word)
+                user["favoriteWords"] = favoriteWords
+            } else {
+                print("Word already favorited")
+            }
+        } else {
+            var favoriteWords = [String]()
+            favoriteWords.append(word)
+            user["favoriteWords"] = favoriteWords
+        }
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User updated")
+            } else {
+                print("Error saving user")
+            }
+        }
+    }
+    
+    // Remove a word from user's favorite words
+    func unfavoriteWord(word: String) {
+        let user = PFUser.current()!
+        
+        if var favoriteWords = user["favoriteWords"] as? [String] {
+            if let index = favoriteWords.firstIndex(of: word) {
+                favoriteWords.remove(at: index)
+                user["favoriteWords"] = favoriteWords
+            } else {
+                print("Word isn't favorited")
+            }
+        } else {
+            let favoriteWords = [String]()
+            user["favoriteWords"] = favoriteWords
+        }
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User updated")
+            } else {
+                print("Error saving user")
+            }
+        }
+    }
+    
+    // Check if a word is favorited in user data
+    func checkFavorite(word: String) -> Bool {
+        let user = PFUser.current()!
+        
+        if let favoriteWords = user["favoriteWords"] as? [String] {
+            if favoriteWords.firstIndex(of: word) != nil {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    }
+    
     // MARK:- API
     func getRandomWord() {
         print("Making request..")
@@ -109,9 +175,13 @@ class WordDefinitionViewController: UIViewController {
             "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
         ]
 
-        var word = wordList.randomElement()! // Get a random word from the list
-        word = String(word.dropLast()) // Remove trailing carriage return (\r)
-        let urlString = String(format: "https://wordsapiv1.p.rapidapi.com/words/%@", word)
+        var randomWord = wordList.randomElement()! // Get a random word from the list
+        randomWord = String(randomWord.dropLast()) // Remove trailing carriage return (\r)
+        
+        // Check if word is favorited or not and update favorite button accordingly
+        setFavorite(checkFavorite(word: randomWord))
+        
+        let urlString = String(format: "https://wordsapiv1.p.rapidapi.com/words/%@", randomWord)
         
         if let url = URL(string: urlString) {
             
@@ -225,8 +295,20 @@ class WordDefinitionViewController: UIViewController {
     @IBAction func onFavorite(_ sender: Any) {
         if(!favorited) {
             setFavorite(true)
+            
+            if let wordToFavorite = wordData["word"] as? String {
+                favoriteWord(word: wordToFavorite)
+            } else {
+                print("No word available")
+            }
         } else {
             setFavorite(false)
+            
+            if let wordToUnfavorite = wordData["word"] as? String {
+                unfavoriteWord(word: wordToUnfavorite)
+            } else {
+                print("No word available")
+            }
         }
     }
     

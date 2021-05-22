@@ -88,7 +88,7 @@ Here's a walkthrough of implemented user stories:
  <img src='https://imgur.com/up2sUL1.gif' width=250 alt='Spring #2' />
  <img src='https://imgur.com/FpN1lio.gif' width=250 alt='Spring #2' />
  <img src='https://i.imgur.com/NyWD0Tq.gif' width=250 alt='Spring #2' />
- ![Simulator Screen Recording - iPhone 11 Pro - 2021-05-21 at 22 53 13](https://user-images.githubusercontent.com/32227554/119212742-58056800-ba88-11eb-83f9-4aebae7e11b2.gif)
+ <img src='https://i.imgur.com/ViEjgPd.gif)' width=250 alt='Spring #2' />
 
 
 

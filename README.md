@@ -29,14 +29,14 @@ This app helps the user improve their English vocabulary in an engaging manner b
 - [x] User can access word definitions
 - [x] User can access examples of correct word usage in a sentence
 - [x] User can save and access their individual progress
-- [ ] User can access and change settings
+- [x] User can access and change settings
 - [X] User can test their knowledge by playing word games/challenges
 
 **Optional Nice-to-have Stories**
 
-* [ ] User can see multiple definitions and their examples
+* [x] User can see multiple definitions and their examples
+* [x] User can favorite a word and access their a list of their favorite words
 * User receives a daily word challenge
-* User can favorite a word and access their a list of their favorite words
 * User can choose a word difficulty level
 * User can choose a word category
 * User can specify a language
@@ -86,10 +86,9 @@ Here's a walkthrough of implemented user stories:
 <p float="left">
  <img src='https://i.imgur.com/DlMjFHL.gif' width=250 alt='Spring #1' />
  <img src='https://imgur.com/up2sUL1.gif' width=250 alt='Spring #2' />
- <img src='https://imgur.com/FpN1lio.gif' width=250 alt='Spring #2' />
- <img src='https://i.imgur.com/NyWD0Tq.gif' width=250 alt='Spring #2' />
-
-  
+ <img src='https://imgur.com/FpN1lio.gif' width=250 alt='Spring #3' />
+ <img src='https://i.imgur.com/NyWD0Tq.gif' width=250 alt='Spring #4' />
+ <img src='https://i.imgur.com/ViEjgPd.gif' width=250 alt='Spring #5' />
 </p>
 
 ## Wireframes

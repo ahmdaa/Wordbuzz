@@ -381,7 +381,7 @@
             <objects>
                 <tableViewController id="IYa-IB-72R" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="RVW-3N-tiX">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <sections>
@@ -478,7 +478,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aAS-Uw-Om9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6841" y="1447"/>
+            <point key="canvasLocation" x="4200" y="1619"/>
         </scene>
         <!--WordDefinitionViewController-->
         <scene sceneID="egE-28-0WS">
@@ -619,6 +619,9 @@
                         <rightBarButtonItems>
                             <barButtonItem title="Settings" id="eHL-Os-Grp">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="IYa-IB-72R" kind="presentation" id="IQc-Qs-qxS"/>
+                                </connections>
                             </barButtonItem>
                             <barButtonItem title="Favorites" id="8kf-Eq-z11">
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

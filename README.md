@@ -30,7 +30,7 @@ This app helps the user improve their English vocabulary in an engaging manner b
 - [x] User can access examples of correct word usage in a sentence
 - [x] User can save and access their individual progress
 - [ ] User can access and change settings
-- [ ] User can test their knowledge by playing word games/challenges
+- [X] User can test their knowledge by playing word games/challenges
 
 **Optional Nice-to-have Stories**
 
@@ -87,6 +87,9 @@ Here's a walkthrough of implemented user stories:
  <img src='https://i.imgur.com/DlMjFHL.gif' width=250 alt='Spring #1' />
  <img src='https://imgur.com/up2sUL1.gif' width=250 alt='Spring #2' />
  <img src='https://imgur.com/FpN1lio.gif' width=250 alt='Spring #2' />
+ <img src='https://i.imgur.com/NyWD0Tq.gif' width=250 alt='Spring #2' />
+
+  
 </p>
 
 ## Wireframes

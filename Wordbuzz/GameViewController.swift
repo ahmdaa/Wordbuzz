@@ -38,16 +38,12 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         answerMessageLabel.isHidden = true // hide
         answerMessageEmojiLabel.isHidden = true // hide
         spacerView.isHidden = true // hide
 
-        configureButtons()
-        getFourRandomWords()
-        getWordList()
-    }
-    
-    func getWordList() {
         if let filepath = Bundle.main.path(forResource: "vocab-beginner", ofType: "txt") {
             do {
                 let contents = try String(contentsOfFile: filepath)
@@ -58,6 +54,10 @@ class GameViewController: UIViewController {
         } else {
             print("File not found")
         }
+        
+        configureButtons()
+        getFourRandomWords()
+        //getWordList()
     }
     
     func configureButtons() {
@@ -75,6 +75,8 @@ class GameViewController: UIViewController {
     
     func getFourRandomWords() {
         let user = PFUser.current()!
+        
+        /*
         var gameWords = [String]()
         gameWords = user["seenWords"] as! [String]
         
@@ -84,15 +86,30 @@ class GameViewController: UIViewController {
             randomWord = String(randomWord.dropLast()) // Remove trailing carriage return (\r)
             gameWords.append(randomWord)
         }
+         
+         //put words array in random order
+         gameWords.shuffle()
+         
+         //get first four words from shuffled words array
+         var word = gameWords[0]
+         var word_incorrect_1 = gameWords[1]
+         var word_incorrect_2 = gameWords[2]
+         var word_incorrect_3 = gameWords[3]
+         
+         */
+
         
-        //put words array in random order
-        gameWords.shuffle()
+        //get word for correct answer choice
+        var word = wordList.randomElement()! // Get a random word from the list
+        word = String(word.dropLast()) // Remove trailing carriage return (\r)
+        //get 3 words for incorrect answer choices
+        var word_incorrect_1 = wordList.randomElement()! // Get a random word from the list
+        word_incorrect_1 = String(word_incorrect_1.dropLast()) // Remove trailing carriage return (\r)
+        var word_incorrect_2 = wordList.randomElement()! // Get a random word from the list
+        word_incorrect_2 = String(word_incorrect_2.dropLast()) // Remove trailing carriage return (\r)
+        var word_incorrect_3 = wordList.randomElement()! // Get a random word from the list
+        word_incorrect_3 = String(word_incorrect_3.dropLast()) // Remove trailing carriage return (\r)
         
-        //get first four words from shuffled words array
-        var word = gameWords[0]
-        var word_incorrect_1 = gameWords[1]
-        var word_incorrect_2 = gameWords[2]
-        var word_incorrect_3 = gameWords[3]
         
         //randomly assign words to buttons
         let randomInt = Int.random(in: 0..<4)
@@ -187,6 +204,8 @@ class GameViewController: UIViewController {
                             // Store the first definition in a variable
                             var question = definitions[0]["definition"] as? String
                             self.wordExampleLabel.text = question
+                            self.wordExampleLabel.isHidden = false //show
+
 
                             
                         } else {
@@ -281,7 +300,7 @@ class GameViewController: UIViewController {
                 wordButton.setBackgroundImage(nil, for: .normal)
             }
 
-            self.wordExampleLabel.text = " "
+            self.wordExampleLabel.isHidden = true //hide
             
 
             //Put the code to display the next question here
@@ -322,6 +341,7 @@ class GameViewController: UIViewController {
                 wordButton.backgroundColor = darkButtonColor
                 wordButton.setBackgroundImage(nil, for: .normal)
             }
+            
         }
     }
     

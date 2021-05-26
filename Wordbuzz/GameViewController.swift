@@ -262,13 +262,12 @@ class GameViewController: UIViewController {
         answerMessageEmojiLabel.text = String("👏")
         answerMessageEmojiLabel.isHidden = false // show
         
-        scoreLabel.text = String("+200")
-
         //update score
+        animateScore(chosenAnswer: chosenAnswer)
         score += 200
         currentScoreLabel.text = String(score)
         
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { (timer) in
 
             //restore UI after a delay
             self.answerMessageLabel.isHidden = true // hide
@@ -287,7 +286,7 @@ class GameViewController: UIViewController {
 
             //Put the code to display the next question here
             //so it doesn't happen until after the delay
-            self.getFourRandomWords() //Or whatever...
+            self.getFourRandomWords()
         }
     }
     
@@ -306,14 +305,15 @@ class GameViewController: UIViewController {
         scoreLabel.text = String("-100")
 
         //update score
-        score -= 100
-        currentScoreLabel.text = String(score)
+        animateScore(chosenAnswer: chosenAnswer)
+        //currentScoreLabel.text = String(score)
 
         //restore UI after a delay
-        Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
+        Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { (timer) in
 
             self.answerMessageLabel.isHidden = true // hide
             self.answerMessageEmojiLabel.isHidden = true // hide
+            self.score -= 100
             self.scoreLabel.text = String("Score")
 
             let darkButtonColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
@@ -324,6 +324,37 @@ class GameViewController: UIViewController {
             }
         }
     }
+    
+    func animateScore(chosenAnswer: Bool) {
+        let animationPeriod: Float = 1.5
+        var startValue = score
+
+        if (chosenAnswer) {
+            var endValue = score + 200
+            DispatchQueue.global(qos: .default).async(execute: {
+                for i in stride(from: startValue, through: endValue - 1, by: 1) {
+                    usleep(useconds_t(animationPeriod / 10 * 10000)) // sleep in microseconds
+                    DispatchQueue.main.async(execute: {
+                        self.currentScoreLabel.text = "\(i+1)"
+                    })
+                }
+            })
+        } else if !(chosenAnswer) {
+            var endValue = score - 100
+            DispatchQueue.global(qos: .default).async(execute: {
+                for i in stride(from: startValue, through: endValue + 1, by: -1) {
+                    usleep(useconds_t(animationPeriod / 10 * 10000)) // sleep in microseconds
+                    DispatchQueue.main.async(execute: {
+                        self.currentScoreLabel.text = "\(i-1)"
+                    })
+                }
+            })
+        }
+        
+        
+    }
+    
+
     
  
     /*

@@ -14,6 +14,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var profileImageView: UIImageView!
     
     @IBOutlet weak var highscoreLabel: UILabel!
+    @IBOutlet weak var lastScoreLabel: UILabel!
+    @IBOutlet weak var timesPlayedLabel: UILabel!
+    @IBOutlet weak var longestStreakLabel: UILabel!
+    @IBOutlet weak var favoritedWordsLabel: UILabel!
+    
+    @IBOutlet var cardsCollection: [UIView]!
+    
     
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
@@ -22,6 +29,8 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureCards()
 
         let user = PFUser.current()!
         
@@ -29,6 +38,12 @@ class ProfileViewController: UIViewController {
             nameLabel.text = name
         } else {
             nameLabel.text = user.username
+        }
+    }
+    
+    func configureCards() {
+        for card in cardsCollection {
+            card.layer.cornerRadius = 12
         }
     }
     

@@ -16,7 +16,9 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var signinButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
-
+    @IBOutlet var textFieldCollection: [UITextField]!
+    @IBOutlet weak var captionLabel: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,17 +69,6 @@ class LoginViewController: UIViewController {
         usernameField.attributedPlaceholder = NSAttributedString(string:"Username", attributes:[NSAttributedString.Key.foregroundColor: customLightGrayColor])
         passwordField.attributedPlaceholder = NSAttributedString(string:"Password", attributes:[NSAttributedString.Key.foregroundColor: customLightGrayColor])
         
-        //set borders
-        usernameField.layer.borderColor = customMediumGrayColor.cgColor
-        usernameField.layer.borderWidth = 3.0
-        usernameField.layer.cornerRadius = 14
-        usernameField.alpha = 1.0
-        passwordField.layer.borderColor = customMediumGrayColor.cgColor
-        passwordField.layer.borderWidth = 3.0
-        passwordField.layer.cornerRadius = 14
-        passwordField.alpha = 1.0
-    
-        
         //set left indentation
         let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         usernameField.leftViewMode = UITextField.ViewMode.always
@@ -86,7 +77,36 @@ class LoginViewController: UIViewController {
         let spacerView_password = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         passwordField.leftViewMode = UITextField.ViewMode.always
         passwordField.leftView = spacerView_password
+        
+        //set borders
+        configureGradient()
          
+    }
+    
+    func configureGradient() {
+        
+        //set custom colors
+        let customPurpleColor = UIColor(red:144/255, green:45/255, blue:254/255, alpha: 1)
+        let customBlueColor = UIColor(red:42/255, green:55/255, blue:231/255, alpha: 1)
+        
+        //set gradient border on text fields
+        for field in textFieldCollection {
+            let lineWidth: CGFloat = 2
+            let rect = field.bounds.insetBy(dx: lineWidth / 2, dy: lineWidth / 2)
+            let path = UIBezierPath(roundedRect: rect, cornerRadius: 14)
+            let gradient = CAGradientLayer()
+            gradient.frame =  CGRect(origin: CGPoint.zero, size: field.frame.size)
+            gradient.colors = [customPurpleColor.cgColor, customBlueColor.cgColor]
+            gradient.startPoint = CGPoint(x: 0, y: 0.5)
+            gradient.endPoint = CGPoint(x: 1, y: 0.5)
+            let shape = CAShapeLayer()
+            shape.lineWidth = lineWidth
+            shape.path = path.cgPath
+            shape.strokeColor = UIColor.black.cgColor
+            shape.fillColor = UIColor.clear.cgColor
+            gradient.mask = shape
+            field.layer.addSublayer(gradient)
+        }
     }
     
     

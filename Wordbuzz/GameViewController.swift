@@ -39,9 +39,9 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         answerMessageLabel.isHidden = true // hide
         answerMessageEmojiLabel.isHidden = true // hide
+        self.wordExampleLabel.isHidden = true //hide
         spacerView.isHidden = true // hide
 
         if let filepath = Bundle.main.path(forResource: "vocab-beginner", ofType: "txt") {
@@ -57,7 +57,6 @@ class GameViewController: UIViewController {
         
         configureButtons()
         getFourRandomWords()
-        //getWordList()
     }
     
     func configureButtons() {
@@ -192,11 +191,7 @@ class GameViewController: UIViewController {
                     
                     DispatchQueue.main.async {
                         self.wordData = dataDictionary // Store word data
-                        
-                        //update count of seenWords
-//                        if let seenWords = user["seenWords"] as? Dictionary[String, Int] {
-//                            seenWords[word] += 1
-//                        }
+    
                         
                         // Get all definitions if any are available
                         if let definitions = dataDictionary["results"] as? [[String: Any]] {
@@ -205,9 +200,21 @@ class GameViewController: UIViewController {
                             var question = definitions[0]["definition"] as? String
                             self.wordExampleLabel.text = question
                             self.wordExampleLabel.isHidden = false //show
-
-
                             
+                            //animate question
+                            self.wordExampleLabel.transform = CGAffineTransform(scaleX: 0.01, y: 0.01)
+                                 UIView.animate(
+                                    withDuration: 0.5,
+                                    delay: 0.0,
+                                    usingSpringWithDamping: 1.5,
+                                    initialSpringVelocity: 1.5,
+                                    options: .curveEaseOut,
+                                    animations: {
+                                        self.wordExampleLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
+                                    },
+                                    completion: nil)
+                            
+                                                        
                         } else {
                             self.wordExampleLabel.text = "No definition found"
                         }
@@ -281,9 +288,16 @@ class GameViewController: UIViewController {
         answerMessageEmojiLabel.text = String("👏")
         answerMessageEmojiLabel.isHidden = false // show
         
+        //change score label
+        let customYellowColor = UIColor(red:255/255, green:212/255, blue:88/255, alpha: 1)
+        scoreLabel.font = scoreLabel.font.withSize(20)
+        scoreLabel.textColor = customYellowColor
+        scoreLabel.text = String("+200")
+        
         //update score
         animateScore(chosenAnswer: chosenAnswer)
         score += 200
+        
         currentScoreLabel.text = String(score)
         
         Timer.scheduledTimer(withTimeInterval: 1.5, repeats: false) { (timer) in
@@ -291,6 +305,11 @@ class GameViewController: UIViewController {
             //restore UI after a delay
             self.answerMessageLabel.isHidden = true // hide
             self.answerMessageEmojiLabel.isHidden = true // hide
+            
+            //change score label back
+            let customGrayColor = UIColor(red:67/255, green:67/255, blue:82/255, alpha: 1)
+            self.scoreLabel.font = self.scoreLabel.font.withSize(15)
+            self.scoreLabel.textColor = customGrayColor
             self.scoreLabel.text = String("Score")
 
             let darkButtonColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
@@ -301,10 +320,7 @@ class GameViewController: UIViewController {
             }
 
             self.wordExampleLabel.isHidden = true //hide
-            
 
-            //Put the code to display the next question here
-            //so it doesn't happen until after the delay
             self.getFourRandomWords()
         }
     }
@@ -321,8 +337,14 @@ class GameViewController: UIViewController {
         answerMessageLabel.text = String("Try again!")
         answerMessageEmojiLabel.isHidden = false // show
         answerMessageEmojiLabel.text = String("👉")
+        
+       
+        //change score label
+        let customYellowColor = UIColor(red:255/255, green:212/255, blue:88/255, alpha: 1)
+        scoreLabel.font = scoreLabel.font.withSize(20)
+        scoreLabel.textColor = customYellowColor
         scoreLabel.text = String("-100")
-
+        
         //update score
         animateScore(chosenAnswer: chosenAnswer)
         //currentScoreLabel.text = String(score)
@@ -333,6 +355,11 @@ class GameViewController: UIViewController {
             self.answerMessageLabel.isHidden = true // hide
             self.answerMessageEmojiLabel.isHidden = true // hide
             self.score -= 100
+            
+            //change score label back
+            let customGrayColor = UIColor(red:67/255, green:67/255, blue:82/255, alpha: 1)
+            self.scoreLabel.font = self.scoreLabel.font.withSize(15)
+            self.scoreLabel.textColor = customGrayColor
             self.scoreLabel.text = String("Score")
 
             let darkButtonColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)

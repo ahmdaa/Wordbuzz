@@ -267,6 +267,16 @@ class GameViewController: UIViewController {
             highScore = streakCount * 200
             user["highScore"] = highScore
         }
+        
+        //save to Parse
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User progress updated")
+            } else {
+                print("Error saving user progress")
+            }
+        }
+            
     }
     
     func guessIsCorrect(chosenAnswer: Bool, button: UIButton) {

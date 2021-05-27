@@ -135,7 +135,7 @@
             </objects>
             <point key="canvasLocation" x="3493" y="-715"/>
         </scene>
-        <!--Profile-->
+        <!--Profile View Controller-->
         <scene sceneID="WEw-fH-GH5">
             <objects>
                 <viewController id="GjF-iE-dpS" customClass="ProfileViewController" customModule="Wordbuzz" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,38 +144,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hot-coffee" translatesAutoresizingMaskIntoConstraints="NO" id="6jt-Ct-H01">
-                                <rect key="frame" x="132" y="98" width="150" height="150"/>
+                                <rect key="frame" x="132" y="142" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="c0s-dA-cGF"/>
                                     <constraint firstAttribute="width" constant="150" id="sCo-00-euN"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daniel Jones" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="THu-Xt-hBh">
-                                <rect key="frame" x="132" y="268" width="150" height="21"/>
+                                <rect key="frame" x="132" y="312" width="150" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="High Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nA-HC-LOE">
-                                <rect key="frame" x="132" y="322" width="150" height="24"/>
+                                <rect key="frame" x="132" y="366" width="150" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="300" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-70-zlL">
-                                <rect key="frame" x="132" y="354" width="150" height="36"/>
+                                <rect key="frame" x="132" y="398" width="150" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last Score: 300  Times Played: 30  Longest Streak: 15 days  Favorited Words: 0" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXJ-FS-IMg">
-                                <rect key="frame" x="93" y="470" width="229" height="142.5"/>
+                                <rect key="frame" x="93" y="514" width="229" height="142.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="My Progress" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucU-Ef-Lnu">
-                                <rect key="frame" x="93" y="427" width="229" height="24"/>
+                                <rect key="frame" x="93" y="471" width="229" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -204,11 +204,9 @@
                             <constraint firstItem="gbb-s8-c0N" firstAttribute="trailing" secondItem="3nA-HC-LOE" secondAttribute="trailing" constant="132" id="wpy-xz-dXs"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Profile" id="EvH-b6-fLD">
-                        <imageReference key="image" image="person.crop.circle" catalog="system" symbolScale="large"/>
-                        <color key="badgeColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="0yj-Kl-Lfx"/>
+                    <navigationItem key="navigationItem" id="0yj-Kl-Lfx">
+                        <barButtonItem key="rightBarButtonItem" title="Settings" id="64d-3L-BaE"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="highscoreLabel" destination="WJo-70-zlL" id="XJF-ft-Z8W"/>
                         <outlet property="nameLabel" destination="THu-Xt-hBh" id="yfk-iu-KdG"/>
@@ -217,7 +215,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHk-lc-HEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4200" y="740.625"/>
+            <point key="canvasLocation" x="4277" y="1458"/>
         </scene>
         <!--Game-->
         <scene sceneID="5gI-Vb-Rk9">
@@ -629,13 +627,31 @@
                     </tabBar>
                     <connections>
                         <segue destination="HMC-Jx-qPX" kind="relationship" relationship="viewControllers" id="iKh-sM-xIb"/>
-                        <segue destination="GjF-iE-dpS" kind="relationship" relationship="viewControllers" id="0Nu-OB-XMH"/>
+                        <segue destination="RWj-sL-eB4" kind="relationship" relationship="viewControllers" id="ebr-7N-mqK"/>
                         <segue destination="oYp-Vn-RVx" kind="relationship" relationship="viewControllers" id="PJd-lA-VtU"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZEE-VR-e0T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3493" y="11"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="hdV-WV-Jta">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H7D-8f-tgd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="RWj-sL-eB4" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="person.circle" catalog="system" id="Q6C-Eo-ZCl"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fKh-k6-1mj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GjF-iE-dpS" kind="relationship" relationship="rootViewController" id="51O-9Q-vVw"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="4277" y="741"/>
         </scene>
         <!--Definitions-->
         <scene sceneID="LRX-8T-v4n">
@@ -671,7 +687,7 @@
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="hot-coffee" width="2048" height="1536"/>
         <image name="logo_cropped" width="112" height="120"/>
-        <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

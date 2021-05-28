@@ -30,6 +30,31 @@ class ProfileViewController: UIViewController {
         } else {
             nameLabel.text = user.username
         }
+        
+        // get high score
+        if let highScore = user["highScore"] as? Int{
+            highscoreLabel.text = String(highScore)
+        }
+        
+        // get last score
+        if let highScore = user["highScore"] as? Int{
+            //lastscorelabel.text = String(highScore)
+        }
+        
+        // get times played
+        if let gamesCount = user["gamesCount"] as? Int{
+            //gamescountLabel.text = String(gamesCount)
+        }
+        
+        // get longest streak
+        if let streakCount = user["streakCount"] as? Int{
+            //streakcountLabel.text = String(streakCount)
+        }
+        
+        // get favorited words
+        if let favoritedWords = user["favoritedWords"] as? Int{
+            //favoritedwordsLabel.text = String(favoritedWords)
+        }
     }
     
 

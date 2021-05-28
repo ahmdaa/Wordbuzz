@@ -275,6 +275,24 @@ class GameViewController: UIViewController {
             user["highScore"] = highScore
         }
         
+
+        //save to Parse
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User progress updated")
+            } else {
+                print("Error saving user progress")
+            }
+        }
+        
+    }
+    
+    func updateLastScore() {
+        let user = PFUser.current()!
+
+        //update last score
+        user["lastScore"] = score
+        
         //save to Parse
         user.saveInBackground { (success, error) in
             if success {
@@ -307,6 +325,8 @@ class GameViewController: UIViewController {
         //update score
         animateScore(chosenAnswer: chosenAnswer)
         score += 200
+        //update last score
+        updateLastScore()
         
         currentScoreLabel.text = String(score)
         
@@ -365,6 +385,8 @@ class GameViewController: UIViewController {
             self.answerMessageLabel.isHidden = true // hide
             self.answerMessageEmojiLabel.isHidden = true // hide
             self.score -= 100
+            //update last score
+            self.updateLastScore()
             
             //change score label back
             let customGrayColor = UIColor(red:67/255, green:67/255, blue:82/255, alpha: 1)

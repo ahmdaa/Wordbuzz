@@ -27,7 +27,6 @@ class ProfileViewController: UIViewController {
         
         let user = PFUser.current()!
         
-        
         //update highScore label
         if let highScore = user["highScore"] as? Int {
             highscoreLabel.text = String(highScore)

@@ -16,7 +16,6 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var highscoreLabel: UILabel!
     @IBOutlet weak var timesPlayedLabel: UILabel!
     @IBOutlet weak var longestStreakLabel: UILabel!
-    @IBOutlet weak var favoritedWordsLabel: UILabel!
     @IBOutlet var cardsCollection: [UIView]!
     @IBOutlet weak var lastScoreLabel: UILabel!
     
@@ -29,29 +28,31 @@ class ProfileViewController: UIViewController {
         //update highScore label
         if let highScore = user["highScore"] as? Int {
             highscoreLabel.text = String(highScore)
-        }
-                
-        //update favoritedWordsLabel
-        if let favoritedWords = user["favoriteWords"] as? [String] {
-            favoritedWordsLabel.text = String(favoritedWords.count)
-        }
-        
-        //update timesPlayed label
-        //saved in Parse as "gamesCount"
-        if let timesPlayed = user["gamesCount"] as? Int {
-            timesPlayedLabel.text = String(timesPlayed)
-        }
-        
-        //update streakCount label
-        if let streakCount = user["streakCount"] as? Int {
-            longestStreakLabel.text = String(streakCount)
+        } else {
+            highscoreLabel.text = "0"
         }
         
         //update lastScore label
         if let lastScore = user["lastScore"] as? Int {
             lastScoreLabel.text = String(lastScore)
+        } else {
+            lastScoreLabel.text = "0"
         }
-
+                
+        //update timesPlayed label
+        //saved in Parse as "gamesCount"
+        if let timesPlayed = user["gamesCount"] as? Int {
+            timesPlayedLabel.text = String(timesPlayed)
+        } else {
+            timesPlayedLabel.text = "0"
+        }
+        
+        //update streakCount label
+        if let streakCount = user["streakCount"] as? Int {
+            longestStreakLabel.text = String(streakCount)
+        } else {
+            longestStreakLabel.text = "0"
+        }
 
     }
     
@@ -67,33 +68,6 @@ class ProfileViewController: UIViewController {
             nameLabel.text = user.username
         }
         
-        //update highScore label
-        if let highScore = user["highScore"] as? Int {
-            highscoreLabel.text = String(highScore)
-        }
-                
-        //update favoritedWordsLabel
-        if let favoritedWords = user["favoriteWords"] as? [String] {
-            favoritedWordsLabel.text = String(favoritedWords.count)
-        }
-        
-        //update timesPlayed label
-        //saved in Parse as "gamesCount"
-        if let timesPlayed = user["gamesCount"] as? Int {
-            timesPlayedLabel.text = String(timesPlayed)
-        }
-        
-        //update streakCount label
-        if let streakCount = user["streakCount"] as? Int {
-            longestStreakLabel.text = String(streakCount)
-        }
-        
-        //update lastScore label
-        if let lastScore = user["lastScore"] as? Int {
-            lastScoreLabel.text = String(lastScore)
-        }
-
-    
         configureCards()
     }
     

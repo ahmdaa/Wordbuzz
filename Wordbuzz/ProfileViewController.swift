@@ -49,11 +49,14 @@ class ProfileViewController: UIViewController {
         }
         
         //update timesPlayed label
-        //saved in Parse as "gamesCount"
-        
+        if let gamesCount = user["gamesCount"] as? [String] {
+            timesPlayedLabel.text = String(gamesCount.count)
+        }
         
         //update streakCount label
-        //saved in Parse as "streakCount"
+        if let streakCount = user["streakCount"] as? [String] {
+            longestStreakLabel.text = String(streakCount.count)
+        }
         
         //update lastScore label
 //        if let lastScore = user["lastScore"] as? Int {

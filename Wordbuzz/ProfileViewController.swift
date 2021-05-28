@@ -24,7 +24,6 @@ class ProfileViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         
-        
         let user = PFUser.current()!
         
         //update highScore label

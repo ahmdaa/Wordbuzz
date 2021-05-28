@@ -18,12 +18,38 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var longestStreakLabel: UILabel!
     @IBOutlet weak var favoritedWordsLabel: UILabel!
     @IBOutlet var cardsCollection: [UIView]!
-    
+    @IBOutlet weak var lastScoreLabel: UILabel!
     
     
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         
+        let user = PFUser.current()!
+        
+        //update highScore label
+        if let highScore = user["highScore"] as? Int {
+            highscoreLabel.text = String(highScore)
+        }
+                
+        //update favoritedWordsLabel
+        if let favoritedWords = user["favoriteWords"] as? [String] {
+            favoritedWordsLabel.text = String(favoritedWords.count)
+        }
+        
+        //update timesPlayed label
+        //saved in Parse as "gamesCount"
+        if let timesPlayed = user["gamesCount"] as? Int {
+            timesPlayedLabel.text = String(timesPlayed)
+        }
+        
+        //update streakCount label
+        //saved in Parse as "streakCount"
+        
+        //update lastScore label
+        if let lastScore = user["lastScore"] as? Int {
+            lastScoreLabel.text = String(lastScore)
+        }
+
     }
     
     override func viewDidLoad() {
@@ -49,8 +75,9 @@ class ProfileViewController: UIViewController {
         }
         
         //update timesPlayed label
-        if let gamesCount = user["gamesCount"] as? [String] {
-            timesPlayedLabel.text = String(gamesCount.count)
+        //saved in Parse as "gamesCount"
+        if let timesPlayed = user["gamesCount"] as? Int {
+            timesPlayedLabel.text = String(timesPlayed)
         }
         
         //update streakCount label
@@ -59,9 +86,9 @@ class ProfileViewController: UIViewController {
         }
         
         //update lastScore label
-//        if let lastScore = user["lastScore"] as? Int {
-//            lastScoreLabel.text = String(lastScore)
-//        }
+        if let lastScore = user["lastScore"] as? Int {
+            lastScoreLabel.text = String(lastScore)
+        }
 
     
         configureCards()

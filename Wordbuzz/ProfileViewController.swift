@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet var cardsCollection: [UIView]!
     
     
+    
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         
@@ -55,6 +56,9 @@ class ProfileViewController: UIViewController {
         //saved in Parse as "streakCount"
         
         //update lastScore label
+//        if let lastScore = user["lastScore"] as? Int {
+//            lastScoreLabel.text = String(lastScore)
+//        }
 
     
         configureCards()

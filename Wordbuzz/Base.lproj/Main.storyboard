@@ -646,7 +646,7 @@
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoritesCell" rowHeight="60" id="9PM-t1-f38" customClass="FavoritesTableViewCell" customModule="Wordbuzz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9PM-t1-f38" id="Rfv-UZ-v5N">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
@@ -679,6 +679,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Favorite Words" id="j6J-Ys-383"/>
+                    <connections>
+                        <segue destination="fHp-zY-joR" kind="show" identifier="ToSpecificWord" id="k3T-yB-C3n"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2k-dy-rfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -731,6 +734,106 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KzP-AF-7XA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2890" y="741"/>
+        </scene>
+        <!--SpecificWordViewController-->
+        <scene sceneID="LHn-IV-XR3">
+            <objects>
+                <viewController title="WordDefinitionViewController" modalPresentationStyle="fullScreen" id="fHp-zY-joR" userLabel="SpecificWordViewController" customClass="SpecificWordViewController" customModule="Wordbuzz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZqI-e9-Y52">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zBR-Bd-Z7P">
+                                <rect key="frame" x="60" y="283.5" width="304" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="183" id="ZZI-iq-8nF"/>
+                                </constraints>
+                                <string key="text">1. marked by sudden changes in subject and sharp transitions
+2. extremely steep
+3. exceedingly sudden and unexpected
+4. surprisingly and unceremoniously brusque in manner 5. exceedingly sudden and unexpected 6. exceedingly sudden and unexpected 7. exceedingly sudden and unexpected</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conserve" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pqW-8l-lWy">
+                                <rect key="frame" x="60" y="138" width="294" height="48"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9yM-KV-EXj">
+                                <rect key="frame" x="60" y="486.5" width="294" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oms-ij-wUE">
+                                <rect key="frame" x="60" y="519.5" width="294" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="183" id="e3N-xi-iam"/>
+                                </constraints>
+                                <string key="text">1. "abrupt prose"
+2. "an abrupt canyon"
+3. "came to an abrupt stop"
+"an abrupt change in the weather"
+4. "an abrupt reply" 5. "came to an abrupt stop" 6. "came to an abrupt stop" 7. "came to an abrupt stop" 8. "came to an abrupt stop"</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Hp-le-Owv">
+                                <rect key="frame" x="100" y="233" width="78" height="18"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.26" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bjF-c4-c62">
+                                <rect key="frame" x="114" y="201" width="50" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="GMb-e1-v13"/>
+                                    <constraint firstAttribute="height" constant="30" id="Yoz-ee-f4c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Hvf-1M-LaZ"/>
+                        <color key="backgroundColor" red="0.054901960780000002" green="0.054901960780000002" blue="0.054901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="pqW-8l-lWy" firstAttribute="top" secondItem="Hvf-1M-LaZ" secondAttribute="top" constant="50" id="50d-mV-nzt"/>
+                            <constraint firstItem="pqW-8l-lWy" firstAttribute="leading" secondItem="Hvf-1M-LaZ" secondAttribute="leading" constant="60" id="8av-EF-rit"/>
+                            <constraint firstItem="9yM-KV-EXj" firstAttribute="top" secondItem="zBR-Bd-Z7P" secondAttribute="bottom" constant="20" id="9Zb-Ub-0C8"/>
+                            <constraint firstItem="bjF-c4-c62" firstAttribute="leading" secondItem="Hvf-1M-LaZ" secondAttribute="leading" constant="114" id="CWe-DG-dp2"/>
+                            <constraint firstItem="9Hp-le-Owv" firstAttribute="leading" secondItem="Hvf-1M-LaZ" secondAttribute="leading" constant="100" id="Czq-qf-TiJ"/>
+                            <constraint firstItem="Hvf-1M-LaZ" firstAttribute="trailing" secondItem="bjF-c4-c62" secondAttribute="trailing" constant="250" id="KmS-7b-vOT"/>
+                            <constraint firstItem="Hvf-1M-LaZ" firstAttribute="trailing" secondItem="oms-ij-wUE" secondAttribute="trailing" constant="60" id="ML7-Gl-sW8"/>
+                            <constraint firstItem="zBR-Bd-Z7P" firstAttribute="leading" secondItem="Hvf-1M-LaZ" secondAttribute="leading" constant="60" id="Pb5-MS-Vxj"/>
+                            <constraint firstItem="Hvf-1M-LaZ" firstAttribute="trailing" secondItem="9Hp-le-Owv" secondAttribute="trailing" constant="236" id="Q9S-iY-lGw"/>
+                            <constraint firstItem="9yM-KV-EXj" firstAttribute="leading" secondItem="Hvf-1M-LaZ" secondAttribute="leading" constant="60" id="QSa-8N-8Sv"/>
+                            <constraint firstItem="oms-ij-wUE" firstAttribute="leading" secondItem="Hvf-1M-LaZ" secondAttribute="leading" constant="60" id="U6C-ay-keE"/>
+                            <constraint firstItem="Hvf-1M-LaZ" firstAttribute="trailing" secondItem="9yM-KV-EXj" secondAttribute="trailing" constant="60" id="Umt-6d-fmy"/>
+                            <constraint firstItem="bjF-c4-c62" firstAttribute="top" secondItem="pqW-8l-lWy" secondAttribute="bottom" constant="15" id="VLJ-Nc-zhi"/>
+                            <constraint firstItem="zBR-Bd-Z7P" firstAttribute="top" secondItem="9Hp-le-Owv" secondAttribute="bottom" constant="32.5" id="WAz-he-jv9"/>
+                            <constraint firstItem="Hvf-1M-LaZ" firstAttribute="trailing" secondItem="zBR-Bd-Z7P" secondAttribute="trailing" constant="50" id="eqa-7V-XDs"/>
+                            <constraint firstItem="9Hp-le-Owv" firstAttribute="top" secondItem="bjF-c4-c62" secondAttribute="bottom" constant="2" id="gFs-Yt-hU4"/>
+                            <constraint firstItem="Hvf-1M-LaZ" firstAttribute="trailing" secondItem="pqW-8l-lWy" secondAttribute="trailing" constant="60" id="qTv-cA-oDg"/>
+                            <constraint firstItem="oms-ij-wUE" firstAttribute="top" secondItem="9yM-KV-EXj" secondAttribute="bottom" constant="12" id="zdx-YU-gGx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="pRI-qc-zmC"/>
+                    <connections>
+                        <outlet property="definitionLabel" destination="zBR-Bd-Z7P" id="OVo-gw-lQZ"/>
+                        <outlet property="examplesLabel" destination="oms-ij-wUE" id="2ip-Sq-gIq"/>
+                        <outlet property="frequencyLabel" destination="bjF-c4-c62" id="hTs-qW-NRC"/>
+                        <outlet property="wordLabel" destination="pqW-8l-lWy" id="rut-TH-DEt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MyY-jd-WZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2890" y="2897"/>
         </scene>
     </scenes>
     <resources>

@@ -47,7 +47,7 @@ class WordDefinitionViewController: UIViewController {
             print("File not found")
         }
         
-        // getRandomWord()
+        getRandomWord()
         // saveSeenWord(seen: "apple")
         // resetSeenWords()
     }

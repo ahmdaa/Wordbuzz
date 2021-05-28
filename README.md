@@ -81,7 +81,9 @@ This app helps the user improve their English vocabulary in an engaging manner b
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Demo: https://drive.google.com/file/d/18STziV23M7f8jDYkiNIFYexsdw68cRQq/view?usp=sharing
+
+Here's walkthroughs of implemented user stories:
 
 <p float="left">
  <img src='https://i.imgur.com/DlMjFHL.gif' width=250 alt='Spring #1' />

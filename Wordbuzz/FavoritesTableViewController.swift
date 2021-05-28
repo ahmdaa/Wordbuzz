@@ -48,6 +48,7 @@ class FavoritesTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "ToSpecificWord", sender: indexPath)
         tableView.deselectRow(at: indexPath, animated: true)
     }
 
@@ -85,15 +86,17 @@ class FavoritesTableViewController: UITableViewController {
         return true
     }
     */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "ToSpecificWord" {
+            let specificWordViewController = segue.destination as! SpecificWordViewController
+            let indexPath = sender as! IndexPath
+            
+            specificWordViewController.specificWord = words[indexPath.row]
+        }
     }
-    */
 
 }

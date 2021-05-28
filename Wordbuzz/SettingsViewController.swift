@@ -11,7 +11,7 @@ import UserNotifications
 class SettingsViewController: UIViewController {
 
     @IBOutlet weak var switchout: UISwitch!
-    @IBAction func notiswitch(_ sender: Any) {
+    @IBAction func notifswitch(_ sender: Any) {
         print ("Hi!")
         // Turning notification switch on and off
 //        if switchout.isOn

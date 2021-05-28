@@ -81,7 +81,9 @@ class ProfileViewController: UIViewController {
         }
         
         //update streakCount label
-        //saved in Parse as "streakCount"
+        if let streakCount = user["streakCount"] as? [String] {
+            longestStreakLabel.text = String(streakCount.count)
+        }
         
         //update lastScore label
         if let lastScore = user["lastScore"] as? Int {

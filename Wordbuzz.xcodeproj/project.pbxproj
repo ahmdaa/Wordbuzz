@@ -12,6 +12,7 @@
 		24E29A712657FE4700BF312D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E29A702657FE4700BF312D /* GameViewController.swift */; };
 		B8A7131A58AE85984F589BA6 /* Pods_Wordbuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */; };
 		CF027C50264EFF8200F99273 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF027C4F264EFF8200F99273 /* ProfileViewController.swift */; };
+		CF14DC71265899F90056936F /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF14DC70265899F90056936F /* SettingsViewController.swift */; };
 		E20F7CF52656F6EC00900D4A /* FavoritesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F7CF42656F6EB00900D4A /* FavoritesTableViewController.swift */; };
 		E20F7CF72656FC2200900D4A /* FavoritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E20F7CF62656FC2200900D4A /* FavoritesTableViewCell.swift */; };
 		E22242A22622085D00CDA3DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E22242A12622085D00CDA3DD /* AppDelegate.swift */; };
@@ -34,6 +35,7 @@
 		5C1368E224AC56A1C9717365 /* Pods-Wordbuzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordbuzz.release.xcconfig"; path = "Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz.release.xcconfig"; sourceTree = "<group>"; };
 		9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordbuzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF027C4F264EFF8200F99273 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		CF14DC70265899F90056936F /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E20F7CF42656F6EB00900D4A /* FavoritesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewController.swift; sourceTree = "<group>"; };
 		E20F7CF62656FC2200900D4A /* FavoritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesTableViewCell.swift; sourceTree = "<group>"; };
 		E222429E2622085D00CDA3DD /* Wordbuzz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Wordbuzz.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -120,6 +122,7 @@
 				E20F7CF62656FC2200900D4A /* FavoritesTableViewCell.swift */,
 				E2AA07592660631E008F2A15 /* SpecificWordViewController.swift */,
 				24E29A702657FE4700BF312D /* GameViewController.swift */,
+				CF14DC70265899F90056936F /* SettingsViewController.swift */,
 			);
 			path = Wordbuzz;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				24E29A712657FE4700BF312D /* GameViewController.swift in Sources */,
 				CF027C50264EFF8200F99273 /* ProfileViewController.swift in Sources */,
 				E22242AC2622085D00CDA3DD /* Wordbuzz.xcdatamodeld in Sources */,
+				CF14DC71265899F90056936F /* SettingsViewController.swift in Sources */,
 				E22242A22622085D00CDA3DD /* AppDelegate.swift in Sources */,
 				242F05112638BDC200945E29 /* LoginViewController.swift in Sources */,
 				E22242A42622085D00CDA3DD /* SceneDelegate.swift in Sources */,

@@ -91,6 +91,7 @@ Here's walkthroughs of implemented user stories:
  <img src='https://imgur.com/FpN1lio.gif' width=250 alt='Spring #3' />
  <img src='https://i.imgur.com/NyWD0Tq.gif' width=250 alt='Spring #4' />
  <img src='https://i.imgur.com/ViEjgPd.gif' width=250 alt='Spring #5' />
+ <img src='https://i.imgur.com/tP1A8iI.gif' width=250 alt='Spring #6' />
 </p>
 
 ## Wireframes

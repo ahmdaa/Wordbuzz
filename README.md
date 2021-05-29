@@ -8,7 +8,7 @@
 
 ## Overview
 ### Description
-This app helps the user improve their English vocabulary in an engaging manner by providing the user with English words and their details in addition to allowing the user to practice their knowledge of these words through word games and challenges.
+This app helps the user improve their vocabulary in an engaging manner by providing the user with random words and their details in addition to allowing the user to practice their knowledge of these words through word games and challenges.
 
 ### App Evaluation
 - **Category:** Education / Productivity
@@ -30,7 +30,7 @@ This app helps the user improve their English vocabulary in an engaging manner b
 - [x] User can access examples of correct word usage in a sentence
 - [x] User can save and access their individual progress
 - [x] User can access and change settings
-- [X] User can test their knowledge by playing word game/challenge
+- [X] User can test their knowledge by playing a word game/challenge
 
 **Optional Nice-to-have Stories**
 
@@ -81,7 +81,9 @@ This app helps the user improve their English vocabulary in an engaging manner b
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Demo: https://drive.google.com/file/d/18STziV23M7f8jDYkiNIFYexsdw68cRQq/view?usp=sharing
+
+Here's walkthroughs of implemented user stories:
 
 <p float="left">
  <img src='https://i.imgur.com/DlMjFHL.gif' width=250 alt='Spring #1' />
@@ -89,6 +91,7 @@ Here's a walkthrough of implemented user stories:
  <img src='https://imgur.com/FpN1lio.gif' width=250 alt='Spring #3' />
  <img src='https://i.imgur.com/NyWD0Tq.gif' width=250 alt='Spring #4' />
  <img src='https://i.imgur.com/ViEjgPd.gif' width=250 alt='Spring #5' />
+ <img src='https://i.imgur.com/tP1A8iI.gif' width=250 alt='Spring #6' />
 </p>
 
 ## Wireframes

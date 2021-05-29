@@ -48,7 +48,7 @@ class SettingsViewController: UIViewController {
             if granted {
                 print("Notifications permission granted")
             } else {
-                print("Notification permission denied because: \(error?.localizedDescription).")
+                print("Notification permission denied because: \(error?.localizedDescription ?? "")")
             }
         }
         

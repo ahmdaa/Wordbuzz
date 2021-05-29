@@ -62,7 +62,7 @@ class LoginViewController: UIViewController {
     func configureTextFields() {
         
         //set custom colors
-        let customMediumGrayColor = UIColor(red:48/255, green:48/255, blue:61/255, alpha: 1)
+        _ = UIColor(red:48/255, green:48/255, blue:61/255, alpha: 1)
         let customLightGrayColor = UIColor(red:194/255, green:194/255, blue:196/255, alpha: 1)
         
         //set placeholder text

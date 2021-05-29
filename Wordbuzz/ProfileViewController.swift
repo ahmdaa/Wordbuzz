@@ -22,6 +22,7 @@ class ProfileViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
+        configureCards()
         
         let user = PFUser.current()!
         
@@ -67,8 +68,6 @@ class ProfileViewController: UIViewController {
         } else {
             nameLabel.text = user.username
         }
-        
-        configureCards()
     }
     
     func configureCards() {

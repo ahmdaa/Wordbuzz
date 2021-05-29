@@ -73,7 +73,7 @@ class GameViewController: UIViewController {
     }
     
     func getFourRandomWords() {
-        let user = PFUser.current()!
+        //let user = PFUser.current()!
         
         /*
         var gameWords = [String]()
@@ -197,8 +197,10 @@ class GameViewController: UIViewController {
                         if let definitions = dataDictionary["results"] as? [[String: Any]] {
                             
                             // Store the first definition in a variable
-                            var question = definitions[0]["definition"] as? String
-                            self.wordExampleLabel.text = question
+                            if let question = definitions[0]["definition"] as? String {
+                                self.wordExampleLabel.text = question
+                            }
+                            
                             self.wordExampleLabel.isHidden = false //show
                             
                             //animate question
@@ -406,10 +408,10 @@ class GameViewController: UIViewController {
     
     func animateScore(chosenAnswer: Bool) {
         let animationPeriod: Float = 1.5
-        var startValue = score
+        let startValue = score
 
         if (chosenAnswer) {
-            var endValue = score + 200
+            let endValue = score + 200
             DispatchQueue.global(qos: .default).async(execute: {
                 for i in stride(from: startValue, through: endValue - 1, by: 1) {
                     usleep(useconds_t(animationPeriod / 10 * 10000)) // sleep in microseconds
@@ -419,7 +421,7 @@ class GameViewController: UIViewController {
                 }
             })
         } else if !(chosenAnswer) {
-            var endValue = score - 100
+            let endValue = score - 100
             DispatchQueue.global(qos: .default).async(execute: {
                 for i in stride(from: startValue, through: endValue + 1, by: -1) {
                     usleep(useconds_t(animationPeriod / 10 * 10000)) // sleep in microseconds

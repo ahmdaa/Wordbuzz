@@ -484,7 +484,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WPU-gs-Otc">
-                                <rect key="frame" x="60" y="284" width="304" height="183"/>
+                                <rect key="frame" x="60" y="291.5" width="304" height="183"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="183" id="7H0-VT-Hdc"/>
                                 </constraints>
@@ -497,20 +497,8 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="conserve" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kem-mm-oJS">
-                                <rect key="frame" x="60" y="138" width="294" height="48"/>
+                                <rect key="frame" x="60" y="138" width="264" height="48"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Favorite" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vdy-FU-STV">
-                                <rect key="frame" x="166" y="237" width="59.5" height="18.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Frequency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-r6-YpM">
-                                <rect key="frame" x="58" y="237.5" width="78" height="18"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -529,13 +517,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Examples" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XoU-r0-g7f">
-                                <rect key="frame" x="60" y="487" width="294" height="21"/>
+                                <rect key="frame" x="60" y="494.5" width="294" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-aG-RhK">
-                                <rect key="frame" x="60" y="520" width="294" height="183"/>
+                                <rect key="frame" x="60" y="527.5" width="294" height="183"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="lessThanOrEqual" constant="183" id="roi-LW-4QX"/>
                                 </constraints>
@@ -548,21 +536,17 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.26" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-WC-S7D">
-                                <rect key="frame" x="72" y="204" width="50" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="3up-BF-Esz"/>
-                                    <constraint firstAttribute="width" constant="50" id="5MC-eE-Rt7"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.26" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-WC-S7D">
+                                <rect key="frame" x="178" y="233" width="46" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XCw-de-ytc">
-                                <rect key="frame" x="179" y="205.5" width="32" height="27.5"/>
+                                <rect key="frame" x="332" y="148.5" width="32" height="27.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="32" id="Uoj-Rl-GqL"/>
-                                    <constraint firstAttribute="height" constant="30" id="Ye8-bE-aGu"/>
+                                    <constraint firstAttribute="height" constant="30" id="64w-Ab-XCj"/>
+                                    <constraint firstAttribute="width" constant="32" id="t6N-JW-paf"/>
                                 </constraints>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" backgroundImage="heart" catalog="system">
@@ -572,35 +556,52 @@
                                     <action selector="onFavorite:" destination="NQj-IT-jCN" eventType="touchUpInside" id="hZe-gi-JeK"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="con ·​ serve" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BRo-j5-uM2">
+                                <rect key="frame" x="60" y="201" width="304" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Frequency:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MtV-r6-YpM">
+                                <rect key="frame" x="60" y="236" width="110" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="R49-Gz-xtf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="110" id="qZX-zq-dS2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cGa-5X-hFA"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="8hM-aG-RhK" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="60" id="5rc-GB-XAu"/>
+                            <constraint firstItem="MtV-r6-YpM" firstAttribute="top" secondItem="BRo-j5-uM2" secondAttribute="bottom" constant="11" id="9jJ-qu-nDO"/>
+                            <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="BRo-j5-uM2" secondAttribute="trailing" constant="50" id="A00-Jp-ICk"/>
                             <constraint firstItem="Kem-mm-oJS" firstAttribute="top" secondItem="cGa-5X-hFA" secondAttribute="top" constant="50" id="CLT-Rp-sGg"/>
-                            <constraint firstItem="Vdy-FU-STV" firstAttribute="top" secondItem="XCw-de-ytc" secondAttribute="bottom" constant="3" id="CMM-wG-ZhN"/>
+                            <constraint firstItem="XCw-de-ytc" firstAttribute="leading" secondItem="Kem-mm-oJS" secondAttribute="trailing" constant="8" symbolic="YES" id="HLl-K7-vBX"/>
                             <constraint firstItem="XoU-r0-g7f" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="60" id="HkX-f1-XcM"/>
                             <constraint firstItem="8hM-aG-RhK" firstAttribute="top" secondItem="XoU-r0-g7f" secondAttribute="bottom" constant="12" id="Hvm-X2-yhJ"/>
+                            <constraint firstItem="Imc-WC-S7D" firstAttribute="leading" secondItem="MtV-r6-YpM" secondAttribute="trailing" constant="8" symbolic="YES" id="LA0-iQ-x7v"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="8hM-aG-RhK" secondAttribute="trailing" constant="60" id="Lr7-wq-IXb"/>
-                            <constraint firstItem="Imc-WC-S7D" firstAttribute="top" secondItem="Kem-mm-oJS" secondAttribute="bottom" constant="18" id="NRS-Au-gnN"/>
-                            <constraint firstItem="MtV-r6-YpM" firstAttribute="top" secondItem="Imc-WC-S7D" secondAttribute="bottom" constant="3.5" id="Nlw-dG-1DE"/>
                             <constraint firstItem="Kem-mm-oJS" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="60" id="OqP-i4-EnC"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="2gt-sv-vyn" secondAttribute="trailing" constant="58" id="PHr-cz-Qsy"/>
-                            <constraint firstItem="XCw-de-ytc" firstAttribute="top" secondItem="Kem-mm-oJS" secondAttribute="bottom" constant="18" id="Rw7-ic-9VJ"/>
-                            <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="Kem-mm-oJS" secondAttribute="trailing" constant="60" id="S0h-Wd-CPV"/>
-                            <constraint firstItem="WPU-gs-Otc" firstAttribute="top" secondItem="Vdy-FU-STV" secondAttribute="bottom" constant="28.5" id="UpO-cz-SIi"/>
-                            <constraint firstItem="XCw-de-ytc" firstAttribute="leading" secondItem="Imc-WC-S7D" secondAttribute="trailing" constant="57" id="dY4-Xd-znx"/>
-                            <constraint firstItem="MtV-r6-YpM" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="58" id="dlB-lE-mCd"/>
-                            <constraint firstItem="WPU-gs-Otc" firstAttribute="top" secondItem="MtV-r6-YpM" secondAttribute="bottom" constant="28.5" id="f46-wf-NI9"/>
-                            <constraint firstItem="Vdy-FU-STV" firstAttribute="leading" secondItem="MtV-r6-YpM" secondAttribute="trailing" constant="30" id="fab-KY-jDo"/>
+                            <constraint firstItem="WPU-gs-Otc" firstAttribute="top" secondItem="MtV-r6-YpM" secondAttribute="bottom" constant="31.5" id="VFX-P5-yhW"/>
+                            <constraint firstItem="BRo-j5-uM2" firstAttribute="top" secondItem="Kem-mm-oJS" secondAttribute="bottom" constant="15" id="WvO-57-2jA"/>
+                            <constraint firstItem="Imc-WC-S7D" firstAttribute="top" secondItem="BRo-j5-uM2" secondAttribute="bottom" constant="8" symbolic="YES" id="XFR-gc-WUG"/>
+                            <constraint firstItem="XCw-de-ytc" firstAttribute="top" secondItem="cGa-5X-hFA" secondAttribute="top" constant="59" id="d4e-7K-7ll"/>
+                            <constraint firstItem="WPU-gs-Otc" firstAttribute="top" secondItem="Imc-WC-S7D" secondAttribute="bottom" constant="28.5" id="fnq-8f-pPH"/>
+                            <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="XCw-de-ytc" secondAttribute="trailing" constant="50" id="h21-Xt-Q9l"/>
                             <constraint firstItem="WPU-gs-Otc" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="60" id="hja-JI-PQ9"/>
                             <constraint firstItem="XoU-r0-g7f" firstAttribute="top" secondItem="WPU-gs-Otc" secondAttribute="bottom" constant="20" id="hqN-tO-v5p"/>
-                            <constraint firstItem="Imc-WC-S7D" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="72" id="i2B-Qv-rSw"/>
-                            <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="Vdy-FU-STV" secondAttribute="trailing" constant="188.5" id="i9F-V1-nyA"/>
+                            <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="Imc-WC-S7D" secondAttribute="trailing" constant="190" id="j8h-DK-yWl"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="bottom" secondItem="2gt-sv-vyn" secondAttribute="bottom" constant="40" id="jZK-dm-elL"/>
+                            <constraint firstItem="MtV-r6-YpM" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="60" id="obr-X3-6tQ"/>
                             <constraint firstItem="2gt-sv-vyn" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="58" id="sPs-TN-hnQ"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="XoU-r0-g7f" secondAttribute="trailing" constant="60" id="tqU-6o-f30"/>
+                            <constraint firstItem="BRo-j5-uM2" firstAttribute="leading" secondItem="cGa-5X-hFA" secondAttribute="leading" constant="60" id="xDb-UP-nff"/>
                             <constraint firstItem="cGa-5X-hFA" firstAttribute="trailing" secondItem="WPU-gs-Otc" secondAttribute="trailing" constant="50" id="z46-YY-RTK"/>
                         </constraints>
                     </view>
@@ -611,7 +612,7 @@
                                 <action selector="onLogout:" destination="NQj-IT-jCN" id="qM7-Zy-Obd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="8kf-Eq-z11">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart.text.square.fill" catalog="system" id="8kf-Eq-z11">
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="u5H-A2-XGC" kind="show" id="Jyd-Py-Kjl"/>
@@ -624,6 +625,7 @@
                         <outlet property="favoriteButton" destination="XCw-de-ytc" id="5uk-r3-l5C"/>
                         <outlet property="frequencyLabel" destination="Imc-WC-S7D" id="wld-aC-mD5"/>
                         <outlet property="nextWordButton" destination="2gt-sv-vyn" id="vIo-Iw-lWj"/>
+                        <outlet property="syllablesLabel" destination="BRo-j5-uM2" id="tee-08-c6v"/>
                         <outlet property="wordLabel" destination="Kem-mm-oJS" id="u8O-j5-LVW"/>
                     </connections>
                 </viewController>
@@ -838,6 +840,7 @@
         <image name="book.fill" catalog="system" width="128" height="102"/>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
         <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="heart.text.square.fill" catalog="system" width="128" height="114"/>
         <image name="hot-coffee" width="2048" height="1536"/>
         <image name="logo_cropped" width="112" height="120"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>

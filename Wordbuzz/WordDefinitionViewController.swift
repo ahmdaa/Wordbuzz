@@ -15,6 +15,7 @@ class WordDefinitionViewController: UIViewController {
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var nextWordButton: UIButton!
     
+    @IBOutlet weak var syllablesLabel: UILabel!
     @IBOutlet weak var frequencyLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
@@ -215,7 +216,19 @@ class WordDefinitionViewController: UIViewController {
                         }
                         
                         //print(dataDictionary["results"][0] ?? "")
-                        //print(dataDictionary["syllables"] ?? "")
+                        
+                        // Get list of word syllables
+                        if let syllables = dataDictionary["syllables"] as? [String: Any] {
+                            if let list = syllables["list"] as? [String] {
+                                var syllableString = ""
+                                for syllable in list {
+                                    syllableString += syllable + "·"
+                                }
+                                self.syllablesLabel.text = syllableString
+                            }
+                        } else {
+                            self.syllablesLabel.text = ""
+                        }
                         
                         // Get all definitions if any are available
                         if let definitions = dataDictionary["results"] as? [[String: Any]] {

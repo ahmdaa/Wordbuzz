@@ -18,6 +18,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var longestStreakLabel: UILabel!
     @IBOutlet var cardsCollection: [UIView]!
     @IBOutlet weak var lastScoreLabel: UILabel!
+    @IBOutlet weak var favoritedWordsLabel: UILabel!
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -54,6 +55,14 @@ class ProfileViewController: UIViewController {
         } else {
             longestStreakLabel.text = "0"
         }
+        
+        //update favoritedWords label
+        if let favoritedWords = user["favoriteWords"] as? [String] {
+            var favnumber = favoritedWords.count
+            favoritedWordsLabel.text = String(favnumber)
+        } else {
+            favoritedWordsLabel.text = "0"
+        }
 
     }
     
@@ -74,9 +83,12 @@ class ProfileViewController: UIViewController {
         
         //set custom purple color
         let customPurpleColor = UIColor(red:146/255, green:45/255, blue:254/255, alpha: 1)
+        let customGrayColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
         
         for card in cardsCollection {
             card.layer.cornerRadius = 12
+            card.layer.backgroundColor = customGrayColor.cgColor
+
             
             //set shadow
             card.layer.shadowOpacity = 1.0 // opacity, 100%

@@ -6,14 +6,19 @@
 //
 
 import UIKit
+import Parse
 
 class SpecificWordViewController: UIViewController {
     
+    @IBOutlet weak var favoriteButton: UIButton!
+    
+    @IBOutlet weak var syllablesLabel: UILabel!
     @IBOutlet weak var frequencyLabel: UILabel!
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet weak var examplesLabel: UILabel!
     
+    var favorited = false
     var specificWord = ""
 
     override func viewDidLoad() {
@@ -23,12 +28,81 @@ class SpecificWordViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    // Add a word to user's favorite words
+    func favoriteWord(word: String) {
+        let user = PFUser.current()!
+        
+        if var favoriteWords = user["favoriteWords"] as? [String] {
+            if( !favoriteWords.contains(word) ) {
+                favoriteWords.append(word)
+                user["favoriteWords"] = favoriteWords
+            } else {
+                print("Word already favorited")
+            }
+        } else {
+            var favoriteWords = [String]()
+            favoriteWords.append(word)
+            user["favoriteWords"] = favoriteWords
+        }
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User updated")
+            } else {
+                print("Error saving user")
+            }
+        }
+    }
+    
+    // Remove a word from user's favorite words
+    func unfavoriteWord(word: String) {
+        let user = PFUser.current()!
+        
+        if var favoriteWords = user["favoriteWords"] as? [String] {
+            if let index = favoriteWords.firstIndex(of: word) {
+                favoriteWords.remove(at: index)
+                user["favoriteWords"] = favoriteWords
+            } else {
+                print("Word isn't favorited")
+            }
+        } else {
+            let favoriteWords = [String]()
+            user["favoriteWords"] = favoriteWords
+        }
+        
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User updated")
+            } else {
+                print("Error saving user")
+            }
+        }
+    }
+    
+    // Check if a word is favorited in user data
+    func checkFavorite(word: String) -> Bool {
+        let user = PFUser.current()!
+        
+        if let favoriteWords = user["favoriteWords"] as? [String] {
+            if favoriteWords.firstIndex(of: word) != nil {
+                return true
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    }
+    
     func getWord() {
         print("Making request..")
         let headers = [
             "x-rapidapi-key": "a10993a051msh078390884b6556fp17dfdfjsn6ef5bb0fb17f",
             "x-rapidapi-host": "wordsapiv1.p.rapidapi.com"
         ]
+        
+        // Check if word is favorited or not and update favorite button accordingly
+        setFavorite(checkFavorite(word: specificWord))
         
         let urlString = String(format: "https://wordsapiv1.p.rapidapi.com/words/%@", specificWord)
         
@@ -63,7 +137,19 @@ class SpecificWordViewController: UIViewController {
                         }
                         
                         //print(dataDictionary["results"][0] ?? "")
-                        //print(dataDictionary["syllables"] ?? "")
+                        
+                        // Get list of word syllables
+                        if let syllables = dataDictionary["syllables"] as? [String: Any] {
+                            if let list = syllables["list"] as? [String] {
+                                var syllableString = ""
+                                for syllable in list {
+                                    syllableString += syllable + "·"
+                                }
+                                self.syllablesLabel.text = syllableString
+                            }
+                        } else {
+                            self.syllablesLabel.text = ""
+                        }
                         
                         // Get all definitions if any are available
                         if let definitions = dataDictionary["results"] as? [[String: Any]] {
@@ -133,6 +219,27 @@ class SpecificWordViewController: UIViewController {
             print("Invalid URL")
         }
         
+    }
+    
+    // MARK:- Button Actions
+    @IBAction func onFavorite(_ sender: Any) {
+        if(!favorited) {
+            setFavorite(true)
+            favoriteWord(word: specificWord)
+
+        } else {
+            setFavorite(false)
+            unfavoriteWord(word: specificWord)
+        }
+    }
+    
+    func setFavorite(_ isFavorited: Bool){
+        favorited = isFavorited
+        if (favorited) {
+            favoriteButton.setBackgroundImage(UIImage(systemName: "heart.fill"), for: UIControl.State.normal)
+        } else {
+            favoriteButton.setBackgroundImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+        }
     }
     
     /*

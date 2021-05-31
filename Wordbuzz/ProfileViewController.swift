@@ -71,9 +71,22 @@ class ProfileViewController: UIViewController {
     }
     
     func configureCards() {
+        
+        //set custom purple color
+        let customPurpleColor = UIColor(red:146/255, green:45/255, blue:254/255, alpha: 1)
+        
         for card in cardsCollection {
             card.layer.cornerRadius = 12
+            
+            //set shadow
+            card.layer.shadowOpacity = 1.0 // opacity, 100%
+            card.layer.shadowColor = customPurpleColor.cgColor
+            card.layer.shadowRadius = 0 // no blur
+            card.layer.shadowOffset = CGSize(width: 0, height: 8) // Spread x, y
+            card.layer.masksToBounds = false
         }
+        
+        
     }
     
 

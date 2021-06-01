@@ -25,6 +25,7 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var advancedButton: UIButton!
     @IBOutlet weak var expertButton: UIButton!
     
+    @IBOutlet var spacerViewCollection: [UIView]!
     
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
@@ -85,6 +86,11 @@ class ProfileViewController: UIViewController {
     }
     
     func configureCards() {
+        
+        //hide spacer views
+        for spacer in spacerViewCollection {
+            spacer.isHidden = true
+        }
         
         //set custom colors
         let customPurpleColor = UIColor(red:146/255, green:45/255, blue:254/255, alpha: 1)

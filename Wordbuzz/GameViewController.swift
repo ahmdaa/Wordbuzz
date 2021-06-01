@@ -24,6 +24,7 @@ class GameViewController: UIViewController {
     
     @IBOutlet var wordChoiceButtons: [UIButton]!
     
+    var userLevel = "vocab-beginner"
     var wordList = [String]()
     var wordData = [String: Any]()
     var score = 0
@@ -36,6 +37,30 @@ class GameViewController: UIViewController {
     var answerC = false
     var answerD = false
     
+
+    override func viewDidAppear(_ animated: Bool) {
+        //get user level
+        let user = PFUser.current()!
+        if let vocabLevel = user["vocabLevel"] as? String {
+            userLevel = vocabLevel
+            print("User level is set to \(userLevel).")
+        } else {
+            userLevel = "vocab-beginner"
+            print("User level set to default value.")
+        }
+        //set word list
+        if let filepath = Bundle.main.path(forResource: userLevel, ofType: "txt") {
+            do {
+                let contents = try String(contentsOfFile: filepath)
+                wordList = contents.components(separatedBy: "\n")
+            } catch {
+                print("Could not load content")
+            }
+        } else {
+            print("File not found")
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -43,8 +68,20 @@ class GameViewController: UIViewController {
         answerMessageEmojiLabel.isHidden = true // hide
         self.wordExampleLabel.isHidden = true //hide
         spacerView.isHidden = true // hide
-
-        if let filepath = Bundle.main.path(forResource: "vocab-beginner", ofType: "txt") {
+        
+        //get user level
+        let user = PFUser.current()!
+        if let vocabLevel = user["vocabLevel"] as? String {
+            //highscoreLabel.text = String(highScore)
+            userLevel = vocabLevel
+            print("User level is set to \(userLevel).")
+        } else {
+            userLevel = "vocab-beginner"
+            print("User level set to default value.")
+        }
+        
+        //set word list
+        if let filepath = Bundle.main.path(forResource: userLevel, ofType: "txt") {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 wordList = contents.components(separatedBy: "\n")
@@ -73,31 +110,7 @@ class GameViewController: UIViewController {
     }
     
     func getFourRandomWords() {
-        //let user = PFUser.current()!
-        
-        /*
-        var gameWords = [String]()
-        gameWords = user["seenWords"] as! [String]
-        
-        //ensure gameWords array has enough words
-        while (gameWords.count < 10) {
-            var randomWord = wordList.randomElement()! // Get a random word from the list
-            randomWord = String(randomWord.dropLast()) // Remove trailing carriage return (\r)
-            gameWords.append(randomWord)
-        }
-         
-         //put words array in random order
-         gameWords.shuffle()
-         
-         //get first four words from shuffled words array
-         var word = gameWords[0]
-         var word_incorrect_1 = gameWords[1]
-         var word_incorrect_2 = gameWords[2]
-         var word_incorrect_3 = gameWords[3]
-         
-         */
-
-        
+      
         //get word for correct answer choice
         var word = wordList.randomElement()! // Get a random word from the list
         word = String(word.dropLast()) // Remove trailing carriage return (\r)

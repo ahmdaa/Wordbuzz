@@ -27,6 +27,8 @@ class ProfileViewController: UIViewController {
     
     @IBOutlet var spacerViewCollection: [UIView]!
     
+    var userLevel = "vocab-beginner"
+    
     override func viewDidAppear(_ animated: Bool) {
         profileImageView.layer.cornerRadius = profileImageView.frame.height / 2
         configureCards()
@@ -96,6 +98,8 @@ class ProfileViewController: UIViewController {
         let customPurpleColor = UIColor(red:146/255, green:45/255, blue:254/255, alpha: 1)
         let customGrayColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
         let customButtonGrayColor = UIColor(red:183/255, green:175/255, blue:191/255, alpha: 1)
+        let customRedColor = UIColor(red:254/255, green:45/255, blue:83/255, alpha: 1)
+
         
         for card in cardsCollection {
             card.layer.cornerRadius = 12
@@ -111,17 +115,36 @@ class ProfileViewController: UIViewController {
         }
         
         for button in buttonsCollection {
-                    button.layer.cornerRadius = 12
-                    button.layer.backgroundColor = customButtonGrayColor.cgColor
+            button.layer.cornerRadius = 12
+            button.layer.backgroundColor = customButtonGrayColor.cgColor
 
-                
-                    //set shadow
-                    button.layer.shadowOpacity = 1.0 // opacity, 100%
-                    button.layer.shadowColor = customPurpleColor.cgColor
-                    button.layer.shadowRadius = 0 // no blur
-                    button.layer.shadowOffset = CGSize(width: 0, height: 8) // Spread x, y
-                    button.layer.masksToBounds = false
-                }
+        
+            //set shadow
+            button.layer.shadowOpacity = 1.0 // opacity, 100%
+            button.layer.shadowColor = customPurpleColor.cgColor
+            button.layer.shadowRadius = 0 // no blur
+            button.layer.shadowOffset = CGSize(width: 0, height: 8) // Spread x, y
+            button.layer.masksToBounds = false
+        }
+        
+        //get user level
+        let user = PFUser.current()!
+        if let vocabLevel = user["vocabLevel"] as? String {
+            userLevel = vocabLevel
+            print("User level is set to \(userLevel).")
+            
+            if vocabLevel == "vocab-beginner" {
+                intermediateButton.layer.backgroundColor = customRedColor.cgColor
+            } else if (vocabLevel == "vocab-advanced") {
+                advancedButton.layer.backgroundColor = customRedColor.cgColor
+            } else if (vocabLevel == "vocab-expert") {
+                expertButton.layer.backgroundColor = customRedColor.cgColor
+            }
+        } else {
+            userLevel = "vocab-beginner"
+            intermediateButton.layer.backgroundColor = customRedColor.cgColor
+            print("User level set to default value.")
+        }
 
         
         
@@ -137,6 +160,18 @@ class ProfileViewController: UIViewController {
         intermediateButton.layer.backgroundColor = customRedColor.cgColor
         advancedButton.layer.backgroundColor = customButtonGrayColor.cgColor
         expertButton.layer.backgroundColor = customButtonGrayColor.cgColor
+        
+        //set user level
+        let user = PFUser.current()!
+        user["vocabLevel"] = "vocab-beginner"
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User level updated")
+            } else {
+                print("Error saving user level")
+            }
+        }
+
     }
     
     @IBAction func didPressAdvancedButton(_ sender: Any) {
@@ -148,6 +183,17 @@ class ProfileViewController: UIViewController {
         intermediateButton.layer.backgroundColor = customButtonGrayColor.cgColor
         advancedButton.layer.backgroundColor = customRedColor.cgColor
         expertButton.layer.backgroundColor = customButtonGrayColor.cgColor
+        
+        //set user level
+        let user = PFUser.current()!
+        user["vocabLevel"] = "vocab-advanced"
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User level updated")
+            } else {
+                print("Error saving user level")
+            }
+        }
     }
     
     @IBAction func didPressExpertButton(_ sender: Any) {
@@ -159,6 +205,18 @@ class ProfileViewController: UIViewController {
         intermediateButton.layer.backgroundColor = customButtonGrayColor.cgColor
         advancedButton.layer.backgroundColor = customButtonGrayColor.cgColor
         expertButton.layer.backgroundColor = customRedColor.cgColor
+        
+        //set user level
+        let user = PFUser.current()!
+        user["vocabLevel"] = "vocab-expert"
+        user.saveInBackground { (success, error) in
+            if success {
+                print("User level updated")
+            } else {
+                print("Error saving user level")
+            }
+        }
+        
     }
     
     

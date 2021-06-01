@@ -64,7 +64,7 @@ class ProfileViewController: UIViewController {
         
         //update favoritedWords label
         if let favoritedWords = user["favoriteWords"] as? [String] {
-            var favnumber = favoritedWords.count
+            let favnumber = favoritedWords.count
             favoritedWordsLabel.text = String(favnumber)
         } else {
             favoritedWordsLabel.text = "0"

@@ -143,7 +143,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hot-coffee" translatesAutoresizingMaskIntoConstraints="NO" id="6jt-Ct-H01">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="default_user_icon" translatesAutoresizingMaskIntoConstraints="NO" id="6jt-Ct-H01">
                                 <rect key="frame" x="132" y="98" width="150" height="150"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="c0s-dA-cGF"/>
@@ -883,10 +883,10 @@
     <resources>
         <image name="Gradient" width="325" height="48"/>
         <image name="book.fill" catalog="system" width="128" height="102"/>
+        <image name="default_user_icon" width="94" height="94"/>
         <image name="gamecontroller" catalog="system" width="128" height="80"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.text.square.fill" catalog="system" width="128" height="114"/>
-        <image name="hot-coffee" width="2048" height="1536"/>
         <image name="logo_cropped" width="112" height="120"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">

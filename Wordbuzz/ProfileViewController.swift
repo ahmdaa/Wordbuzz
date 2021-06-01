@@ -17,8 +17,13 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var timesPlayedLabel: UILabel!
     @IBOutlet weak var longestStreakLabel: UILabel!
     @IBOutlet var cardsCollection: [UIView]!
+    @IBOutlet var buttonsCollection: [UIButton]!
     @IBOutlet weak var lastScoreLabel: UILabel!
     @IBOutlet weak var favoritedWordsLabel: UILabel!
+    
+    @IBOutlet weak var intermediateButton: UIButton!
+    @IBOutlet weak var advancedButton: UIButton!
+    @IBOutlet weak var expertButton: UIButton!
     
     
     override func viewDidAppear(_ animated: Bool) {
@@ -81,9 +86,10 @@ class ProfileViewController: UIViewController {
     
     func configureCards() {
         
-        //set custom purple color
+        //set custom colors
         let customPurpleColor = UIColor(red:146/255, green:45/255, blue:254/255, alpha: 1)
         let customGrayColor = UIColor(red:39/255, green:40/255, blue:52/255, alpha: 1)
+        let customButtonGrayColor = UIColor(red:183/255, green:175/255, blue:191/255, alpha: 1)
         
         for card in cardsCollection {
             card.layer.cornerRadius = 12
@@ -98,8 +104,57 @@ class ProfileViewController: UIViewController {
             card.layer.masksToBounds = false
         }
         
+        for button in buttonsCollection {
+                    button.layer.cornerRadius = 12
+                    button.layer.backgroundColor = customButtonGrayColor.cgColor
+
+                
+                    //set shadow
+                    button.layer.shadowOpacity = 1.0 // opacity, 100%
+                    button.layer.shadowColor = customPurpleColor.cgColor
+                    button.layer.shadowRadius = 0 // no blur
+                    button.layer.shadowOffset = CGSize(width: 0, height: 8) // Spread x, y
+                    button.layer.masksToBounds = false
+                }
+
+        
         
     }
+    
+    
+    @IBAction func didPressIntermediateButton(_ sender: Any) {
+        //set custom colors
+        let customButtonGrayColor = UIColor(red:183/255, green:175/255, blue:191/255, alpha: 1)
+        let customRedColor = UIColor(red:254/255, green:45/255, blue:83/255, alpha: 1)
+        
+        //change button colors
+        intermediateButton.layer.backgroundColor = customRedColor.cgColor
+        advancedButton.layer.backgroundColor = customButtonGrayColor.cgColor
+        expertButton.layer.backgroundColor = customButtonGrayColor.cgColor
+    }
+    
+    @IBAction func didPressAdvancedButton(_ sender: Any) {
+        //set custom colors
+        let customButtonGrayColor = UIColor(red:183/255, green:175/255, blue:191/255, alpha: 1)
+        let customRedColor = UIColor(red:254/255, green:45/255, blue:83/255, alpha: 1)
+        
+        //change button colors
+        intermediateButton.layer.backgroundColor = customButtonGrayColor.cgColor
+        advancedButton.layer.backgroundColor = customRedColor.cgColor
+        expertButton.layer.backgroundColor = customButtonGrayColor.cgColor
+    }
+    
+    @IBAction func didPressExpertButton(_ sender: Any) {
+        //set custom colors
+        let customButtonGrayColor = UIColor(red:183/255, green:175/255, blue:191/255, alpha: 1)
+        let customRedColor = UIColor(red:254/255, green:45/255, blue:83/255, alpha: 1)
+        
+        //change button colors
+        intermediateButton.layer.backgroundColor = customButtonGrayColor.cgColor
+        advancedButton.layer.backgroundColor = customButtonGrayColor.cgColor
+        expertButton.layer.backgroundColor = customRedColor.cgColor
+    }
+    
     
 
     /*

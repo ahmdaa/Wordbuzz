@@ -26,6 +26,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var expertButton: UIButton!
     
     @IBOutlet var spacerViewCollection: [UIView]!
+    @IBOutlet var cardTitleCollection: [UILabel]!
+    @IBOutlet var greetingCollection: [UILabel]!
+    @IBOutlet var smallTextCollection: [UILabel]!
+    
+    
     
     var userLevel = "vocab-beginner"
     
@@ -85,6 +90,23 @@ class ProfileViewController: UIViewController {
         } else {
             nameLabel.text = user.username
         }
+        
+        //add fonts
+        intermediateButton.titleLabel?.font = UIFont(name: "Poppins-SemiBold", size: 17)
+        advancedButton.titleLabel?.font = UIFont(name: "Poppins-SemiBold", size: 17)
+        expertButton.titleLabel?.font = UIFont(name: "Poppins-SemiBold", size: 17)
+        highscoreLabel.font = UIFont(name: "Poppins-Black", size: 54)
+        nameLabel.font = UIFont(name: "Poppins-SemiBold", size: 27)
+        for card in cardTitleCollection {
+            card.font = UIFont(name: "Poppins-SemiBold", size: 24)
+        }
+        for greeting in greetingCollection {
+            greeting.font = UIFont(name: "Poppins-SemiBold", size: 27)
+        }
+        for text in smallTextCollection {
+            text.font = UIFont(name: "Poppins-SemiBold", size: 17)
+        }
+
     }
     
     func configureCards() {

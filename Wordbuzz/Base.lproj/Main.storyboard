@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fju-mH-igP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fju-mH-igP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -483,6 +483,20 @@
                         <outletCollection property="spacerViewCollection" destination="elX-cD-SQ9" collectionClass="NSMutableArray" id="FPe-Lz-695"/>
                         <outletCollection property="spacerViewCollection" destination="zHt-3X-mbG" collectionClass="NSMutableArray" id="dRP-ZC-7Sz"/>
                         <outletCollection property="spacerViewCollection" destination="TBK-DE-AF7" collectionClass="NSMutableArray" id="5Lc-P2-82H"/>
+                        <outletCollection property="cardTitleCollection" destination="1Ho-aL-Q3r" collectionClass="NSMutableArray" id="1AT-xj-Sh9"/>
+                        <outletCollection property="cardTitleCollection" destination="kgq-bo-nyO" collectionClass="NSMutableArray" id="b6v-CP-yG5"/>
+                        <outletCollection property="cardTitleCollection" destination="RTB-D0-UMx" collectionClass="NSMutableArray" id="15C-vI-p2a"/>
+                        <outletCollection property="greetingCollection" destination="eLZ-52-d4f" collectionClass="NSMutableArray" id="b0x-We-81O"/>
+                        <outletCollection property="greetingCollection" destination="tcp-Tc-Gpx" collectionClass="NSMutableArray" id="4wo-vV-pZC"/>
+                        <outletCollection property="greetingCollection" destination="THu-Xt-hBh" collectionClass="NSMutableArray" id="G1T-ct-LIY"/>
+                        <outletCollection property="smallTextCollection" destination="pg3-PS-S3H" collectionClass="NSMutableArray" id="6us-DW-Eth"/>
+                        <outletCollection property="smallTextCollection" destination="qRP-er-a2s" collectionClass="NSMutableArray" id="mcS-e9-LTK"/>
+                        <outletCollection property="smallTextCollection" destination="Rcb-g5-2Eh" collectionClass="NSMutableArray" id="mie-sN-gl9"/>
+                        <outletCollection property="smallTextCollection" destination="k3a-ua-Bcs" collectionClass="NSMutableArray" id="Xyr-LZ-cX1"/>
+                        <outletCollection property="smallTextCollection" destination="RKb-lO-feX" collectionClass="NSMutableArray" id="NfQ-rw-0cc"/>
+                        <outletCollection property="smallTextCollection" destination="IiU-tw-w64" collectionClass="NSMutableArray" id="c5z-gd-fxA"/>
+                        <outletCollection property="smallTextCollection" destination="Eix-ii-ddO" collectionClass="NSMutableArray" id="Rbm-7a-Z1L"/>
+                        <outletCollection property="smallTextCollection" destination="mbN-Nn-44e" collectionClass="NSMutableArray" id="05Y-WQ-vQS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dHk-lc-HEE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -844,7 +858,7 @@
                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FavoritesCell" rowHeight="60" id="9PM-t1-f38" customClass="FavoritesTableViewCell" customModule="Wordbuzz" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9PM-t1-f38" id="Rfv-UZ-v5N">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>

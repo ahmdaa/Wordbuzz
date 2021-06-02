@@ -69,6 +69,18 @@ class GameViewController: UIViewController {
         self.wordExampleLabel.isHidden = true //hide
         spacerView.isHidden = true // hide
         
+        //set fonts
+        wordExampleLabel.font = UIFont(name: "Poppins-Medium", size: 24)
+        currentScoreLabel.font = UIFont(name: "Poppins-Bold", size: 24)
+        scoreLabel.font = UIFont(name: "Poppins-SemiBold", size: 15)
+        answerMessageLabel.font = UIFont(name: "Poppins-SemiBold", size: 16)
+
+        wordChoiceOneButton.titleLabel?.font =  UIFont(name: "OpenSans-Bold", size: 18)
+        wordChoiceTwoButton.titleLabel?.font =  UIFont(name: "OpenSans-Bold", size: 18)
+        wordChoiceThreeButton.titleLabel?.font =  UIFont(name: "OpenSans-Bold", size: 18)
+        wordChoiceFourButton.titleLabel?.font =  UIFont(name: "OpenSans-Bold", size: 18)
+
+        
         //get user level
         let user = PFUser.current()!
         if let vocabLevel = user["vocabLevel"] as? String {

@@ -14,6 +14,7 @@
 		24804260266779460019E671 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2480425B266779450019E671 /* Poppins-Bold.ttf */; };
 		24804261266779460019E671 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2480425C266779460019E671 /* Poppins-Regular.ttf */; };
 		24804262266779460019E671 /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2480425D266779460019E671 /* Poppins-Black.ttf */; };
+		2480426726678D5D0019E671 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2480426626678D5D0019E671 /* OpenSans-Bold.ttf */; };
 		24E29A712657FE4700BF312D /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E29A702657FE4700BF312D /* GameViewController.swift */; };
 		B8A7131A58AE85984F589BA6 /* Pods_Wordbuzz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */; };
 		CF027C50264EFF8200F99273 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF027C4F264EFF8200F99273 /* ProfileViewController.swift */; };
@@ -41,6 +42,7 @@
 		2480425B266779450019E671 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Bold.ttf"; path = "../../../../../Downloads/Poppins (1)/Poppins-Bold.ttf"; sourceTree = "<group>"; };
 		2480425C266779460019E671 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Regular.ttf"; path = "../../../../../Downloads/Poppins (1)/Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		2480425D266779460019E671 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Black.ttf"; path = "../../../../../Downloads/Poppins (1)/Poppins-Black.ttf"; sourceTree = "<group>"; };
+		2480426626678D5D0019E671 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "OpenSans-Bold.ttf"; path = "../../../../../Downloads/Open_Sans/OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		24E29A702657FE4700BF312D /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		5C1368E224AC56A1C9717365 /* Pods-Wordbuzz.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wordbuzz.release.xcconfig"; path = "Target Support Files/Pods-Wordbuzz/Pods-Wordbuzz.release.xcconfig"; sourceTree = "<group>"; };
 		9127C2C02E157F5D67793CF2 /* Pods_Wordbuzz.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wordbuzz.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +81,7 @@
 		24804258266778880019E671 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				2480426626678D5D0019E671 /* OpenSans-Bold.ttf */,
 				2480425D266779460019E671 /* Poppins-Black.ttf */,
 				2480425B266779450019E671 /* Poppins-Bold.ttf */,
 				24804259266779450019E671 /* Poppins-Medium.ttf */,
@@ -219,6 +222,7 @@
 				2480425F266779460019E671 /* Poppins-SemiBold.ttf in Resources */,
 				24804260266779460019E671 /* Poppins-Bold.ttf in Resources */,
 				24804261266779460019E671 /* Poppins-Regular.ttf in Resources */,
+				2480426726678D5D0019E671 /* OpenSans-Bold.ttf in Resources */,
 				E22242AE2622085F00CDA3DD /* Assets.xcassets in Resources */,
 				E22242A92622085D00CDA3DD /* Main.storyboard in Resources */,
 			);

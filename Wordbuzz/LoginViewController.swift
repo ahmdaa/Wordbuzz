@@ -18,12 +18,16 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var registerButton: UIButton!
     @IBOutlet var textFieldCollection: [UITextField]!
     @IBOutlet weak var captionLabel: UILabel!
+    @IBOutlet weak var wordbuzzLabel: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureButtons()
         configureTextFields()
+        wordbuzzLabel.font = UIFont(name: "Poppins-SemiBold", size: 38)
+        captionLabel.font = UIFont(name: "OpenSans-Bold", size: 18)
+
         
         // Do any additional setup after loading the view.
     }
@@ -61,14 +65,21 @@ class LoginViewController: UIViewController {
     
     func configureTextFields() {
         
+        //set fonts
+        usernameField.font = UIFont(name: "OpenSans-Bold", size: 18)
+        passwordField.font = UIFont(name: "OpenSans-Bold", size: 18)
+
+        
         //set custom colors
         _ = UIColor(red:48/255, green:48/255, blue:61/255, alpha: 1)
         let customLightGrayColor = UIColor(red:194/255, green:194/255, blue:196/255, alpha: 1)
         
         //set placeholder text
-        usernameField.attributedPlaceholder = NSAttributedString(string:"Username", attributes:[NSAttributedString.Key.foregroundColor: customLightGrayColor])
-        passwordField.attributedPlaceholder = NSAttributedString(string:"Password", attributes:[NSAttributedString.Key.foregroundColor: customLightGrayColor])
+        usernameField.attributedPlaceholder = NSAttributedString(string:"Username", attributes:[NSAttributedString.Key.foregroundColor: customLightGrayColor, NSAttributedString.Key.font: UIFont(name: "OpenSans-Bold", size: 18)!])
+        passwordField.attributedPlaceholder = NSAttributedString(string:"Password", attributes:[NSAttributedString.Key.foregroundColor: customLightGrayColor, NSAttributedString.Key.font: UIFont(name: "OpenSans-Bold", size: 18)!])
         
+        
+      
         //set left indentation
         let spacerView = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         usernameField.leftViewMode = UITextField.ViewMode.always
@@ -77,7 +88,7 @@ class LoginViewController: UIViewController {
         let spacerView_password = UIView(frame:CGRect(x:0, y:0, width:10, height:10))
         passwordField.leftViewMode = UITextField.ViewMode.always
         passwordField.leftView = spacerView_password
-        
+ 
         //set borders
         configureGradient()
          
@@ -114,6 +125,8 @@ class LoginViewController: UIViewController {
         signinButton.clipsToBounds = true
         signinButton.layer.cornerRadius = 14
         registerButton.layer.cornerRadius = 14
+        signinButton.titleLabel?.font =  UIFont(name: "OpenSans-Bold", size: 18)
+        registerButton.titleLabel?.font =  UIFont(name: "OpenSans-Bold", size: 18)
     }
 
     

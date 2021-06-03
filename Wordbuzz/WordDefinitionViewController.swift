@@ -20,6 +20,7 @@ class WordDefinitionViewController: UIViewController {
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var definitionLabel: UILabel!
     @IBOutlet weak var examplesLabel: UILabel!
+    @IBOutlet weak var frequencyWordLabel: UILabel!
     
     var wordList = [String]()
     var wordData = [String: Any]()
@@ -27,16 +28,23 @@ class WordDefinitionViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         nextWordButton.clipsToBounds = true
-        nextWordButton.layer.cornerRadius = 14
+        nextWordButton.layer.cornerRadius = 12
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set fonts
+        wordLabel.font = UIFont(name: "Poppins-Bold", size: 32)
+        syllablesLabel.font = UIFont(name: "Poppins-Medium", size: 20)
+        frequencyLabel.font = UIFont(name: "Poppins-Medium", size: 20)
+        frequencyWordLabel.font = UIFont(name: "Poppins-Medium", size: 20)
+
+        
         // Vocabulary is going to be at the beginner level by default
         // Read words from vocab-beginner.txt and populate wordList
-        if let filepath = Bundle.main.path(forResource: "vocab-beginner", ofType: "txt") {
+        if let filepath = Bundle.main.path(forResource: "vocab-advanced", ofType: "txt") {
             do {
                 let contents = try String(contentsOfFile: filepath)
                 wordList = contents.components(separatedBy: "\n")

@@ -27,7 +27,8 @@
 		E22242AC2622085D00CDA3DD /* Wordbuzz.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E22242AA2622085D00CDA3DD /* Wordbuzz.xcdatamodeld */; };
 		E22242AE2622085F00CDA3DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E22242AD2622085F00CDA3DD /* Assets.xcassets */; };
 		E22242B12622085F00CDA3DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E22242AF2622085F00CDA3DD /* LaunchScreen.storyboard */; };
-		E23B80D8266F1633009CAEBC /* HighScoresTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B80D7266F1633009CAEBC /* HighScoresTableViewController.swift */; };
+		E23B80D8266F1633009CAEBC /* LeaderboardTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B80D7266F1633009CAEBC /* LeaderboardTableViewController.swift */; };
+		E23B80DA266F2B6E009CAEBC /* LeaderboardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E23B80D9266F2B6E009CAEBC /* LeaderboardTableViewCell.swift */; };
 		E2AA075A2660631E008F2A15 /* SpecificWordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2AA07592660631E008F2A15 /* SpecificWordViewController.swift */; };
 		E2D7D1F4264E2612008D45B5 /* vocab-intermediate.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2D7D1F3264E2612008D45B5 /* vocab-intermediate.txt */; };
 		E2D7D1F6264E268D008D45B5 /* vocab-beginner.txt in Resources */ = {isa = PBXBuildFile; fileRef = E2D7D1F5264E268D008D45B5 /* vocab-beginner.txt */; };
@@ -59,7 +60,8 @@
 		E22242AD2622085F00CDA3DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E22242B02622085F00CDA3DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E22242B22622085F00CDA3DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E23B80D7266F1633009CAEBC /* HighScoresTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighScoresTableViewController.swift; sourceTree = "<group>"; };
+		E23B80D7266F1633009CAEBC /* LeaderboardTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewController.swift; sourceTree = "<group>"; };
+		E23B80D9266F2B6E009CAEBC /* LeaderboardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardTableViewCell.swift; sourceTree = "<group>"; };
 		E2AA07592660631E008F2A15 /* SpecificWordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificWordViewController.swift; sourceTree = "<group>"; };
 		E2D7D1F3264E2612008D45B5 /* vocab-intermediate.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vocab-intermediate.txt"; sourceTree = "<group>"; };
 		E2D7D1F5264E268D008D45B5 /* vocab-beginner.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "vocab-beginner.txt"; sourceTree = "<group>"; };
@@ -151,7 +153,8 @@
 				E2AA07592660631E008F2A15 /* SpecificWordViewController.swift */,
 				24E29A702657FE4700BF312D /* GameViewController.swift */,
 				CF14DC70265899F90056936F /* SettingsViewController.swift */,
-				E23B80D7266F1633009CAEBC /* HighScoresTableViewController.swift */,
+				E23B80D7266F1633009CAEBC /* LeaderboardTableViewController.swift */,
+				E23B80D9266F2B6E009CAEBC /* LeaderboardTableViewCell.swift */,
 			);
 			path = Wordbuzz;
 			sourceTree = "<group>";
@@ -280,7 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E23B80D8266F1633009CAEBC /* HighScoresTableViewController.swift in Sources */,
+				E23B80D8266F1633009CAEBC /* LeaderboardTableViewController.swift in Sources */,
+				E23B80DA266F2B6E009CAEBC /* LeaderboardTableViewCell.swift in Sources */,
 				E2AA075A2660631E008F2A15 /* SpecificWordViewController.swift in Sources */,
 				24E29A712657FE4700BF312D /* GameViewController.swift in Sources */,
 				CF027C50264EFF8200F99273 /* ProfileViewController.swift in Sources */,

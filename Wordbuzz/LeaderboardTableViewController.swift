@@ -6,18 +6,19 @@
 //
 
 import UIKit
+import Parse
 
 class LeaderboardTableViewController: UITableViewController {
 
+    var rankedUsers = [PFObject]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        getUsers()
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 5
@@ -26,7 +27,7 @@ class LeaderboardTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardCell", for: indexPath) as! LeaderboardTableViewCell
-
+        
         cell.rankLabel.text = String(indexPath.row + 1)
 
         return cell
@@ -34,6 +35,22 @@ class LeaderboardTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func getUsers() {
+        
+        let query = PFQuery(className: "User")
+        // query.order(byDescending: "highScore")
+        query.limit = 10
+        
+        print("Retrieving ranked users..")
+        query.findObjectsInBackground { (users, error) in
+            if users != nil {
+                print("Users found..")
+                self.rankedUsers = users!
+                // self.tableView.reloadData()
+            }
+        }
     }
 
     /*

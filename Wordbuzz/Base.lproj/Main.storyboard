@@ -689,6 +689,39 @@
             </objects>
             <point key="canvasLocation" x="5676.811594202899" y="1457.8125"/>
         </scene>
+        <!--High Scores-->
+        <scene sceneID="258-Bd-dZx">
+            <objects>
+                <tableViewController id="8dZ-JA-eBf" customClass="HighScoresTableViewController" customModule="Wordbuzz" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="PfK-go-rZT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="W0d-WE-Itr">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W0d-WE-Itr" id="obF-00-Tbt">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="8dZ-JA-eBf" id="qaR-PX-DR9"/>
+                            <outlet property="delegate" destination="8dZ-JA-eBf" id="TL2-gw-lco"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="High Scores" id="SiZ-qn-AzD"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mup-Q4-jUE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2381" y="2186"/>
+        </scene>
         <!--WordDefinitionViewController-->
         <scene sceneID="egE-28-0WS">
             <objects>
@@ -737,9 +770,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hM-aG-RhK">
-                                <rect key="frame" x="60" y="554.5" width="294" height="183"/>
+                                <rect key="frame" x="60" y="554.5" width="294" height="140"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="183" id="roi-LW-4QX"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="140" id="roi-LW-4QX"/>
                                 </constraints>
                                 <string key="text">1. "abrupt prose"
 2. "an abrupt canyon"
@@ -832,12 +865,21 @@
                                 <action selector="onLogout:" destination="NQj-IT-jCN" id="qM7-Zy-Obd"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart.text.square.fill" catalog="system" id="8kf-Eq-z11">
-                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <connections>
-                                <segue destination="u5H-A2-XGC" kind="show" id="Jyd-Py-Kjl"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Item" image="heart.text.square.fill" catalog="system" id="8kf-Eq-z11">
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="u5H-A2-XGC" kind="show" id="Jyd-Py-Kjl"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem id="Dpz-nQ-nH4">
+                                <imageReference key="image" image="star.fill" catalog="system" symbolScale="large"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <segue destination="8dZ-JA-eBf" kind="show" id="KLn-Zy-owT"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="definitionLabel" destination="WPU-gs-Otc" id="e5t-D5-qdX"/>
@@ -905,7 +947,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J2k-dy-rfM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2889.8550724637685" y="2189.7321428571427"/>
+            <point key="canvasLocation" x="3493" y="2186"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="qj3-pa-T5O">
@@ -991,7 +1033,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oms-ij-wUE">
                                 <rect key="frame" x="60" y="519.5" width="294" height="183"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="183" id="e3N-xi-iam"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="e3N-xi-iam"/>
                                 </constraints>
                                 <string key="text">1. "abrupt prose"
 2. "an abrupt canyon"
@@ -1080,7 +1122,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MyY-jd-WZr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2890" y="2897"/>
+            <point key="canvasLocation" x="3493" y="2912"/>
         </scene>
     </scenes>
     <resources>
@@ -1092,6 +1134,7 @@
         <image name="heart.text.square.fill" catalog="system" width="128" height="114"/>
         <image name="logo_cropped" width="112" height="120"/>
         <image name="person.crop.circle" catalog="system" width="128" height="121"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

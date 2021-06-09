@@ -15,18 +15,37 @@ class LeaderboardTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //set fonts
+//        cell.rankLabel.font = UIFont(name: "Poppins-Black", size: 54)
+//        nameLabel.font = UIFont(name: "Poppins-SemiBold", size: 54)
+//        highscoreLabel.font = UIFont(name: "Poppins-SemiBold", size: 54)
+
         getUsers()
     }
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 10
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "leaderboardCell", for: indexPath) as! LeaderboardTableViewCell
+        
+        //set fonts
+        let customYellowColor = UIColor(red:255/255, green:209/255, blue:45/255, alpha: 1)
+        cell.rankLabel.font = UIFont(name: "Poppins-Black", size: 27)
+        cell.rankLabel.textColor = customYellowColor
+        cell.nameLabel.font = UIFont(name: "Poppins-SemiBold", size: 19)
+        cell.highscoreLabel.font = UIFont(name: "Poppins-SemiBold", size: 19)
+        
+        //set cards
+        let customPurpleColor = UIColor(red:146/255, green:45/255, blue:254/255, alpha: 1)
+        cell.cardView.layer.cornerRadius = 12
+        cell.cardView.layer.backgroundColor = customPurpleColor.cgColor
+
+        
         
         cell.rankLabel.text = String(indexPath.row + 1)
 

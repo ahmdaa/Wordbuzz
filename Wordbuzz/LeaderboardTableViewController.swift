@@ -16,14 +16,13 @@ class LeaderboardTableViewController: UITableViewController {
         super.viewDidLoad()
         
         getUsers()
-        
     }
 
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return rankedUsers.count
     }
 
     
@@ -66,7 +65,7 @@ class LeaderboardTableViewController: UITableViewController {
         query.limit = 5
         query.findObjectsInBackground{ (objects: [PFObject]?, error: Error?) in
             if let error = error {
-                print("error found")
+                print(error.localizedDescription)
             } else if let objects = objects {
                 print("Successfully retrieved \(objects.count) objects")
                 self.rankedUsers = objects

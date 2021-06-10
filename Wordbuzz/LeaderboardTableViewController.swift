@@ -60,7 +60,7 @@ class LeaderboardTableViewController: UITableViewController {
             cell.nameLabel.text = user["username"] as? String
             if let score = user["highScore"] as? Int {
                 cell.highscoreLabel.text = String(score)
-                print(String(score))
+                // print(String(score))
             }
         }
         return cell
@@ -80,7 +80,7 @@ class LeaderboardTableViewController: UITableViewController {
             if let error = error {
                 print(error.localizedDescription)
             } else if let objects = objects {
-                print("Successfully retrieved \(objects.count) objects")
+                print("Successfully retrieved \(objects.count) users")
                 self.rankedUsers = objects
                 self.tableView.reloadData()
             }

@@ -13,6 +13,7 @@ class LeaderboardTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var highscoreLabel: UILabel!
     @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var winnerLabel: UILabel!
     
     /* override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)

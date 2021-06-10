@@ -728,14 +728,22 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wLM-g7-2ab">
+                                                    <rect key="frame" x="148.5" y="50.5" width="94" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBlueColor"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="84b-dC-tLc"/>
                                                 <constraint firstAttribute="trailing" secondItem="Li7-UP-wLp" secondAttribute="trailing" constant="24" id="BKI-Ii-Wlv"/>
                                                 <constraint firstItem="Li7-UP-wLp" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="Epf-yZ-p5m"/>
+                                                <constraint firstItem="wLM-g7-2ab" firstAttribute="leading" secondItem="gXC-Qg-oT1" secondAttribute="trailing" constant="10" id="PsY-zz-dqM"/>
                                                 <constraint firstItem="gXC-Qg-oT1" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="Y3i-63-ttK"/>
                                                 <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="YvW-bj-THV"/>
+                                                <constraint firstItem="wLM-g7-2ab" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="eCC-VJ-na9"/>
                                                 <constraint firstItem="gXC-Qg-oT1" firstAttribute="leading" secondItem="BeG-zF-N36" secondAttribute="trailing" constant="20" id="iCb-na-fkB"/>
                                                 <constraint firstItem="BeG-zF-N36" firstAttribute="leading" secondItem="oGt-wA-AcA" secondAttribute="leading" constant="24" id="oMb-O1-ixp"/>
                                                 <constraint firstItem="BeG-zF-N36" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="uI9-Gn-hcq"/>
@@ -756,6 +764,7 @@
                                     <outlet property="highscoreLabel" destination="Li7-UP-wLp" id="Cx8-Lq-1id"/>
                                     <outlet property="nameLabel" destination="gXC-Qg-oT1" id="Lb7-yb-f1s"/>
                                     <outlet property="rankLabel" destination="BeG-zF-N36" id="EfV-Pc-rsq"/>
+                                    <outlet property="winnerLabel" destination="wLM-g7-2ab" id="U3N-wb-Sjw"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

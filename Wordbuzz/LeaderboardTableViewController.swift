@@ -41,20 +41,16 @@ class LeaderboardTableViewController: UITableViewController {
         let customPurpleColor = UIColor(red:146/255, green:45/255, blue:254/255, alpha: 1)
         cell.cardView.layer.cornerRadius = 12
         cell.cardView.layer.backgroundColor = customPurpleColor.cgColor
-
-        
         
         cell.rankLabel.text = String(indexPath.row + 1)
         if rankedUsers.count >= 1 {
-            let user = rankedUsers[indexPath.row] as! PFUser //error: index out of range
-            cell.nameLabel.text = user.username
-            
-            //cell.highscoreLabel.text = user["highScore"] as? String
-            
-            print(user["highScore"])
-
+            let user = rankedUsers[indexPath.row]
+            cell.nameLabel.text = user["username"] as? String
+            if let score = user["highScore"] as? Int {
+                cell.highscoreLabel.text = String(score)
+                print(String(score))
+            }
         }
-        print("Ranked users: \(rankedUsers.count)")
         return cell
     }
     
@@ -72,7 +68,6 @@ class LeaderboardTableViewController: UITableViewController {
             if let error = error {
                 print("error found")
             } else if let objects = objects {
-                //successful
                 print("Successfully retrieved \(objects.count) objects")
                 self.rankedUsers = objects
                 self.tableView.reloadData()

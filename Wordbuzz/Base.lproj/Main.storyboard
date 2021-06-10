@@ -722,8 +722,8 @@
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="2400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-UP-wLp">
-                                                    <rect key="frame" x="215" y="64" width="115" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2400" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Li7-UP-wLp">
+                                                    <rect key="frame" x="281.5" y="64" width="44.5" height="21"/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -731,10 +731,11 @@
                                             </subviews>
                                             <color key="backgroundColor" systemColor="systemBlueColor"/>
                                             <constraints>
-                                                <constraint firstItem="Li7-UP-wLp" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="7So-U1-fmr"/>
-                                                <constraint firstAttribute="height" constant="72" id="84b-dC-tLc"/>
-                                                <constraint firstAttribute="trailing" secondItem="Li7-UP-wLp" secondAttribute="trailing" constant="20" id="LhH-j7-vRz"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="72" id="84b-dC-tLc"/>
+                                                <constraint firstAttribute="trailing" secondItem="Li7-UP-wLp" secondAttribute="trailing" constant="24" id="BKI-Ii-Wlv"/>
+                                                <constraint firstItem="Li7-UP-wLp" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="Epf-yZ-p5m"/>
                                                 <constraint firstItem="gXC-Qg-oT1" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="Y3i-63-ttK"/>
+                                                <constraint firstAttribute="width" relation="lessThanOrEqual" constant="350" id="YvW-bj-THV"/>
                                                 <constraint firstItem="gXC-Qg-oT1" firstAttribute="leading" secondItem="BeG-zF-N36" secondAttribute="trailing" constant="20" id="iCb-na-fkB"/>
                                                 <constraint firstItem="BeG-zF-N36" firstAttribute="leading" secondItem="oGt-wA-AcA" secondAttribute="leading" constant="24" id="oMb-O1-ixp"/>
                                                 <constraint firstItem="BeG-zF-N36" firstAttribute="centerY" secondItem="oGt-wA-AcA" secondAttribute="centerY" id="uI9-Gn-hcq"/>

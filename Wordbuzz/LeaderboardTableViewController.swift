@@ -86,21 +86,6 @@ class LeaderboardTableViewController: UITableViewController {
                 self.tableView.reloadData()
             }
         }
-        
-        /*
-        let query = PFQuery(className: "User")
-        // query.order(byDescending: "highScore")
-        query.limit = 5
-        
-        print("Retrieving ranked users..")
-        query.findObjectsInBackground { (users, error) in
-            if users != nil {
-                print("\(users.count) users found..")
-                self.rankedUsers = users!
-                // self.tableView.reloadData()
-            }
-        }
-         */
     }
 
     /*

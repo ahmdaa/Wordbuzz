@@ -14,7 +14,6 @@ class LeaderboardTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         getUsers()
     }
 

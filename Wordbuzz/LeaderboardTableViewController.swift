@@ -15,18 +15,15 @@ class LeaderboardTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //set fonts
-//        cell.rankLabel.font = UIFont(name: "Poppins-Black", size: 54)
-//        nameLabel.font = UIFont(name: "Poppins-SemiBold", size: 54)
-//        highscoreLabel.font = UIFont(name: "Poppins-SemiBold", size: 54)
-
         getUsers()
+        
     }
+
 
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return 5
     }
 
     
@@ -48,7 +45,16 @@ class LeaderboardTableViewController: UITableViewController {
         
         
         cell.rankLabel.text = String(indexPath.row + 1)
+        if rankedUsers.count >= 1 {
+            let user = rankedUsers[indexPath.row] as! PFUser //error: index out of range
+            cell.nameLabel.text = user.username
+            
+            //cell.highscoreLabel.text = user["highScore"] as? String
+            
+            print(user["highScore"])
 
+        }
+        print("Ranked users: \(rankedUsers.count)")
         return cell
     }
     
@@ -58,18 +64,35 @@ class LeaderboardTableViewController: UITableViewController {
     
     func getUsers() {
         
+        let query = PFQuery(className: "_User")
+        query.order(byDescending: "highScore")
+        query.includeKeys(["username", "highScore"])
+        query.limit = 5
+        query.findObjectsInBackground{ (objects: [PFObject]?, error: Error?) in
+            if let error = error {
+                print("error found")
+            } else if let objects = objects {
+                //successful
+                print("Successfully retrieved \(objects.count) objects")
+                self.rankedUsers = objects
+                self.tableView.reloadData()
+            }
+        }
+        
+        /*
         let query = PFQuery(className: "User")
         // query.order(byDescending: "highScore")
-        query.limit = 10
+        query.limit = 5
         
         print("Retrieving ranked users..")
         query.findObjectsInBackground { (users, error) in
             if users != nil {
-                print("Users found..")
+                print("\(users.count) users found..")
                 self.rankedUsers = users!
                 // self.tableView.reloadData()
             }
         }
+         */
     }
 
     /*
